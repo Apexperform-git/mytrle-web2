@@ -27,16 +27,16 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-full neu-pressed-deep flex items-center justify-center">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-xl neu-pressed-deep flex items-center justify-center">
             <span className="text-neu-accent font-display font-extrabold text-lg">M</span>
           </div>
           <div className="flex flex-col">
             <span className="font-display font-bold text-neu-fg text-sm leading-tight tracking-tight">
-              myrtle europe
+              Myrtle Europe
             </span>
-            <span className="text-[10px] text-neu-muted tracking-widest uppercase">
-              omni navigation
+            <span className="text-[10px] text-neu-muted tracking-[0.2em] uppercase">
+              OmnI Navigation
             </span>
           </div>
         </Link>

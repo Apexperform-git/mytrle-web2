@@ -21,16 +21,16 @@ export default function NeuButton({
   const sizeClasses = {
     sm: "px-5 py-2.5 text-sm",
     md: "px-7 py-3.5 text-base",
-    lg: "px-9 py-4.5 text-lg",
+    lg: "px-9 py-4 text-lg",
   };
 
   const variantClasses = {
     primary:
-      "bg-neu-accent text-white neu-flat transition-all duration-300 hover:-translate-y-0.5 hover:neu-flat-hover active:translate-y-[0.5px] active:neu-pressed-sm font-medium",
+      "bg-neu-accent text-white neu-flat transition-all duration-300 hover:-translate-y-0.5 hover:bg-neu-accent-dark active:translate-y-[0.5px] active:neu-pressed-sm font-semibold tracking-wide",
     secondary:
-      "bg-neu-bg text-neu-accent neu-flat transition-all duration-300 hover:-translate-y-0.5 hover:neu-flat-hover active:translate-y-[0.5px] active:neu-pressed-sm font-medium",
+      "bg-neu-bg text-neu-fg neu-flat transition-all duration-300 hover:-translate-y-0.5 hover:neu-flat-hover active:translate-y-[0.5px] active:neu-pressed-sm font-semibold",
     ghost:
-      "bg-transparent text-neu-accent hover:text-neu-accent-dark transition-colors duration-300 font-medium underline-offset-4 hover:underline",
+      "bg-transparent text-neu-fg hover:text-neu-accent transition-colors duration-300 font-medium",
   };
 
   const classes = `

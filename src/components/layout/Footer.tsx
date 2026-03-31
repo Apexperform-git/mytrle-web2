@@ -14,30 +14,28 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Brand */}
             <div className="lg:col-span-1">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-full neu-pressed-deep flex items-center justify-center">
-                  <span className="text-neu-accent font-display font-extrabold text-lg">
-                    M
-                  </span>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl neu-pressed-deep flex items-center justify-center">
+                  <span className="text-neu-accent font-display font-extrabold text-lg">M</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="font-display font-bold text-neu-fg text-sm leading-tight">
-                    myrtle europe
+                    Myrtle Europe
                   </span>
-                  <span className="text-[10px] text-neu-muted tracking-widest uppercase">
-                    omni navigation
+                  <span className="text-[10px] text-neu-muted tracking-[0.2em] uppercase">
+                    OmnI Navigation
                   </span>
                 </div>
               </div>
               <p className="text-sm text-neu-muted leading-relaxed">
-                Human-centric operational intelligence that guides decisions with
-                confidence, not guesswork.
+                Human-centric operational intelligence that guides decisions
+                with confidence, not guesswork.
               </p>
             </div>
 
-            {/* Product Links */}
+            {/* Product */}
             <div>
-              <h3 className="font-display font-bold text-neu-fg text-sm uppercase tracking-wider mb-6">
+              <h3 className="font-display font-bold text-neu-fg text-xs uppercase tracking-[0.2em] mb-6">
                 Product
               </h3>
               <ul className="space-y-3">
@@ -54,9 +52,9 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Company Links */}
+            {/* Company */}
             <div>
-              <h3 className="font-display font-bold text-neu-fg text-sm uppercase tracking-wider mb-6">
+              <h3 className="font-display font-bold text-neu-fg text-xs uppercase tracking-[0.2em] mb-6">
                 Company
               </h3>
               <ul className="space-y-3">
@@ -75,7 +73,7 @@ export default function Footer() {
 
             {/* Connect */}
             <div>
-              <h3 className="font-display font-bold text-neu-fg text-sm uppercase tracking-wider mb-6">
+              <h3 className="font-display font-bold text-neu-fg text-xs uppercase tracking-[0.2em] mb-6">
                 Connect
               </h3>
               <ul className="space-y-3">
@@ -104,7 +102,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Bottom bar */}
           <div className="mt-12 pt-8 border-t border-neu-muted/20 text-center">
             <p className="text-xs text-neu-muted">{COMPANY.copyright}</p>
           </div>

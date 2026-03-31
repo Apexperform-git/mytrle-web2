@@ -11,22 +11,22 @@ export default function WhatIsOmniPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 md:py-32">
+      <section className="py-24 md:py-36">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <span className="inline-block text-sm font-semibold tracking-widest uppercase text-neu-accent mb-6">
+            <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-6">
               What is OmnI
             </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-neu-fg leading-[1.1] max-w-4xl mx-auto">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-neu-fg leading-[1.08] max-w-4xl mx-auto">
               Operational Intelligence that{" "}
               <span className="text-neu-accent">Guides, Not Reports</span>
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-neu-muted leading-relaxed max-w-3xl mx-auto">
+            <p className="mt-6 text-lg text-neu-muted leading-relaxed max-w-2xl mx-auto">
               OmnI NAVIGATION learns how your operation really behaves, reasons
               about what may happen next, and guides people with clear, explainable
               actions.
             </p>
-            <p className="mt-4 text-base text-neu-muted italic">
+            <p className="mt-3 text-sm text-neu-muted font-medium">
               Not a dashboard. Not automation. Navigation.
             </p>
           </ScrollReveal>
@@ -34,7 +34,7 @@ export default function WhatIsOmniPage() {
       </section>
 
       {/* Understanding → Reasoning → Guidance */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             tag="Core Framework"
@@ -47,35 +47,32 @@ export default function WhatIsOmniPage() {
                 title: "Understanding",
                 description:
                   "Learn how the operation actually behaves — signals, events, context. Not how it should behave in theory.",
-                icon: "🔍",
               },
               {
                 step: "02",
                 title: "Reasoning",
                 description:
                   "Simulate near-future scenarios and compare possible actions. Foresight, not hindsight.",
-                icon: "🧠",
               },
               {
                 step: "03",
                 title: "Guidance",
                 description:
                   "Give clear, explainable steps with expected effect and timing. Operators decide, not the system.",
-                icon: "🧭",
               },
             ].map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.15}>
+              <ScrollReveal key={item.title} delay={i * 0.12}>
                 <NeuCard hover className="p-8 h-full relative overflow-hidden">
-                  <span className="absolute top-4 right-6 font-display text-6xl font-extrabold text-neu-accent/10">
+                  <span className="absolute top-4 right-6 font-display text-6xl font-extrabold text-neu-fg/5">
                     {item.step}
                   </span>
-                  <NeuIconBox size="lg" className="mb-6">
-                    <span>{item.icon}</span>
-                  </NeuIconBox>
-                  <h3 className="font-display text-xl font-bold text-neu-fg mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-neu-accent/10 flex items-center justify-center mb-6">
+                    <span className="font-display font-bold text-neu-accent text-sm">{item.step}</span>
+                  </div>
+                  <h3 className="font-display text-lg font-bold text-neu-fg mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-neu-muted leading-relaxed">
+                  <p className="text-neu-muted leading-relaxed text-[15px]">
                     {item.description}
                   </p>
                 </NeuCard>
@@ -86,9 +83,9 @@ export default function WhatIsOmniPage() {
       </section>
 
       {/* Why OmnI Exists */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
               <div>
                 <SectionHeading
@@ -98,18 +95,18 @@ export default function WhatIsOmniPage() {
                 />
                 <p className="text-neu-muted leading-relaxed mb-6">
                   Plans describe the ideal. Reports explain the past. But operators
-                  live in the &ldquo;now&rdquo; — making decisions every minute without
-                  the right context.
+                  live in the &ldquo;now&rdquo; — making decisions every minute
+                  without the right context.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {[
                     "Firefighting instead of flow",
                     "Data without direction",
                     "People blamed for system behavior",
                   ].map((pain) => (
                     <div key={pain} className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-red-400 shrink-0" />
-                      <span className="text-neu-fg font-medium">{pain}</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-neu-accent shrink-0" />
+                      <span className="text-neu-fg text-[15px]">{pain}</span>
                     </div>
                   ))}
                 </div>
@@ -117,7 +114,7 @@ export default function WhatIsOmniPage() {
             </ScrollReveal>
             <ScrollReveal direction="right" delay={0.2}>
               <NeuCard variant="pressed" className="p-8 md:p-10">
-                <p className="font-display text-xl md:text-2xl font-bold text-neu-fg leading-relaxed">
+                <p className="font-display text-xl md:text-2xl font-semibold text-neu-fg leading-relaxed">
                   &ldquo;If a system cannot explain itself to operators, it is not
                   intelligence —{" "}
                   <span className="text-neu-accent">it is noise.</span>&rdquo;
@@ -129,7 +126,7 @@ export default function WhatIsOmniPage() {
       </section>
 
       {/* What OmnI Is NOT */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading tag="Clear Distinction" title="What OmnI Is NOT" />
           <div className="grid md:grid-cols-3 gap-8">
@@ -150,15 +147,17 @@ export default function WhatIsOmniPage() {
                   "No more explaining what already happened. OmnI predicts what matters next and guides action.",
               },
             ].map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.15}>
+              <ScrollReveal key={item.title} delay={i * 0.12}>
                 <NeuCard variant="pressed" className="p-8 h-full">
-                  <div className="w-10 h-10 rounded-full bg-red-400/20 flex items-center justify-center mb-4">
-                    <span className="text-red-400 text-xl font-bold">✕</span>
+                  <div className="w-8 h-8 rounded-lg bg-neu-secondary/10 flex items-center justify-center mb-5">
+                    <svg className="w-4 h-4 text-neu-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                   </div>
-                  <h3 className="font-display text-xl font-bold text-neu-fg mb-3">
+                  <h3 className="font-display text-lg font-bold text-neu-fg mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-neu-muted leading-relaxed">
+                  <p className="text-neu-muted leading-relaxed text-[15px]">
                     {item.description}
                   </p>
                 </NeuCard>
@@ -169,7 +168,7 @@ export default function WhatIsOmniPage() {
       </section>
 
       {/* Target Users */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             tag="Who Benefits"
@@ -179,8 +178,7 @@ export default function WhatIsOmniPage() {
             {[
               {
                 role: "Operators",
-                question: '"What should I do now?"',
-                icon: "🔧",
+                question: "What should I do now?",
                 benefits: [
                   "Real-time decision support",
                   "Clear guidance instead of pressure",
@@ -189,8 +187,7 @@ export default function WhatIsOmniPage() {
               },
               {
                 role: "Team Leads",
-                question: '"What changed and why?"',
-                icon: "👥",
+                question: "What changed and why?",
                 benefits: [
                   "Understanding instead of blame",
                   "Change visibility and causation",
@@ -199,8 +196,7 @@ export default function WhatIsOmniPage() {
               },
               {
                 role: "Supervisors",
-                question: '"What is likely to break next?"',
-                icon: "📊",
+                question: "What is likely to break next?",
                 benefits: [
                   "Predictive operational insights",
                   "24/7 visibility wherever they are",
@@ -208,19 +204,23 @@ export default function WhatIsOmniPage() {
                 ],
               },
             ].map((user, i) => (
-              <ScrollReveal key={user.role} delay={i * 0.15}>
+              <ScrollReveal key={user.role} delay={i * 0.12}>
                 <NeuCard hover className="p-8 h-full">
-                  <NeuIconBox size="lg" className="mb-4">
-                    <span>{user.icon}</span>
-                  </NeuIconBox>
-                  <h3 className="font-display text-xl font-bold text-neu-fg mb-1">
+                  <div className="w-10 h-10 rounded-xl bg-neu-accent/10 flex items-center justify-center mb-5">
+                    <span className="font-display font-bold text-neu-accent text-sm">
+                      0{i + 1}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-lg font-bold text-neu-fg mb-1">
                     {user.role}
                   </h3>
-                  <p className="text-neu-accent italic mb-4">{user.question}</p>
-                  <ul className="space-y-2">
+                  <p className="text-sm text-neu-accent mb-5 italic">&ldquo;{user.question}&rdquo;</p>
+                  <ul className="space-y-2.5">
                     {user.benefits.map((b) => (
-                      <li key={b} className="flex items-start gap-2 text-sm text-neu-muted">
-                        <span className="text-neu-secondary mt-0.5">&#10003;</span>
+                      <li key={b} className="flex items-start gap-2.5 text-sm text-neu-muted">
+                        <svg className="w-4 h-4 text-neu-accent mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
                         {b}
                       </li>
                     ))}
@@ -233,15 +233,15 @@ export default function WhatIsOmniPage() {
       </section>
 
       {/* Impact */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
-              <NeuCard className="p-10 text-center">
-                <div className="font-display text-7xl md:text-8xl font-extrabold text-neu-accent mb-4">
+              <NeuCard className="p-10 md:p-12 text-center">
+                <div className="font-display text-6xl md:text-7xl font-extrabold text-neu-accent mb-3 tabular-nums">
                   <CountUp end={50} suffix="%+" />
                 </div>
-                <p className="text-lg text-neu-muted font-medium">
+                <p className="text-base text-neu-muted font-medium">
                   Reduction in Non-Value-Added Time
                 </p>
               </NeuCard>
@@ -251,10 +251,10 @@ export default function WhatIsOmniPage() {
                 <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-neu-fg mb-6">
                   Good Systems Make Good People Better
                 </h2>
-                <p className="text-neu-muted leading-relaxed mb-4">
-                  Bad systems make good people look bad. OmnI creates the conditions
-                  where operators can excel — with clear guidance, real context, and
-                  explainable reasoning.
+                <p className="text-neu-muted leading-relaxed mb-6">
+                  Bad systems make good people look bad. OmnI creates the
+                  conditions where operators can excel — with clear guidance,
+                  real context, and explainable reasoning.
                 </p>
                 <div className="space-y-3">
                   {[
@@ -263,8 +263,8 @@ export default function WhatIsOmniPage() {
                     "Clear guidance instead of pressure",
                   ].map((item) => (
                     <div key={item} className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-neu-secondary shrink-0" />
-                      <span className="text-neu-fg">{item}</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-neu-accent shrink-0" />
+                      <span className="text-neu-fg text-[15px]">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -275,16 +275,17 @@ export default function WhatIsOmniPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <NeuCard className="p-10 md:p-16 text-center">
               <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-neu-fg mb-4">
                 Test OmnI on Your Reality
               </h2>
-              <p className="text-lg text-neu-muted mb-8 max-w-2xl mx-auto">
-                We do not believe in generic demos. OmnI proves itself only on real
-                operations. Bring one real line, one real shift, one real problem.
+              <p className="text-base text-neu-muted mb-8 max-w-2xl mx-auto leading-relaxed">
+                We do not believe in generic demos. OmnI proves itself only on
+                real operations. Bring one real line, one real shift, one real
+                problem.
               </p>
               <NeuButton href="/contact" size="lg">
                 Get in Touch

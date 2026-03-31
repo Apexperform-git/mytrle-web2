@@ -7,9 +7,9 @@ type NeuIconBoxProps = {
 };
 
 const sizeMap = {
-  sm: "w-12 h-12 text-xl",
-  md: "w-16 h-16 text-2xl",
-  lg: "w-20 h-20 text-3xl",
+  sm: "w-10 h-10",
+  md: "w-14 h-14",
+  lg: "w-16 h-16",
 };
 
 export default function NeuIconBox({
@@ -20,7 +20,7 @@ export default function NeuIconBox({
   return (
     <div
       className={`
-        inline-flex items-center justify-center rounded-full
+        inline-flex items-center justify-center rounded-2xl
         bg-neu-bg neu-pressed-deep text-neu-accent
         ${sizeMap[size]} ${className}
       `}
