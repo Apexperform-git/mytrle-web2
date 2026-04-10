@@ -1,100 +1,70 @@
 import Link from "next/link";
-import {
-  FOOTER_PRODUCT_LINKS,
-  FOOTER_COMPANY_LINKS,
-  SOCIAL_LINKS,
-  COMPANY,
-} from "@/lib/constants";
+import { FOOTER_PRODUCT, FOOTER_COMPANY, SOCIAL, COMPANY } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="mt-32 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="neu-flat rounded-[32px] p-8 md:p-12 lg:p-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {/* Brand */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl neu-pressed-deep flex items-center justify-center">
-                  <span className="text-neu-accent font-display font-extrabold text-lg">M</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-display font-bold text-neu-fg text-sm leading-tight">
-                    Myrtle Europe
-                  </span>
-                  <span className="text-[10px] text-neu-muted tracking-[0.2em] uppercase">
-                    OmnI Navigation
-                  </span>
-                </div>
+    <footer className="mt-24 pb-8">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="bg-surface-3 border border-warm-border rounded-lg p-8 md:p-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div>
+              <div className="mb-4">
+                <span className="font-display font-semibold text-warm-fg text-[15px] tracking-tight">
+                  Myrtle Europe
+                </span>
+                <span className="block text-[11px] text-warm-muted tracking-[0.1em] uppercase font-display mt-0.5">
+                  OmnI Navigation
+                </span>
               </div>
-              <p className="text-sm text-neu-muted leading-relaxed">
+              <p className="text-sm text-warm-muted leading-relaxed">
                 Human-centric operational intelligence that guides decisions
                 with confidence, not guesswork.
               </p>
             </div>
 
-            {/* Product */}
             <div>
-              <h3 className="font-display font-bold text-neu-fg text-xs uppercase tracking-[0.2em] mb-6">
+              <h3 className="text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-fg mb-5">
                 Product
               </h3>
-              <ul className="space-y-3">
-                {FOOTER_PRODUCT_LINKS.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-neu-muted hover:text-neu-accent transition-colors duration-300"
-                    >
-                      {link.label}
+              <ul className="space-y-2.5">
+                {FOOTER_PRODUCT.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="text-sm text-warm-muted hover:text-warm-hover transition-colors duration-200">
+                      {l.label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Company */}
             <div>
-              <h3 className="font-display font-bold text-neu-fg text-xs uppercase tracking-[0.2em] mb-6">
+              <h3 className="text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-fg mb-5">
                 Company
               </h3>
-              <ul className="space-y-3">
-                {FOOTER_COMPANY_LINKS.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-neu-muted hover:text-neu-accent transition-colors duration-300"
-                    >
-                      {link.label}
+              <ul className="space-y-2.5">
+                {FOOTER_COMPANY.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="text-sm text-warm-muted hover:text-warm-hover transition-colors duration-200">
+                      {l.label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Connect */}
             <div>
-              <h3 className="font-display font-bold text-neu-fg text-xs uppercase tracking-[0.2em] mb-6">
+              <h3 className="text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-fg mb-5">
                 Connect
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 <li>
-                  <a
-                    href={SOCIAL_LINKS.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-neu-muted hover:text-neu-accent transition-colors duration-300 inline-flex items-center gap-2"
-                  >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
+                  <a href={SOCIAL.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-warm-muted hover:text-warm-hover transition-colors duration-200 inline-flex items-center gap-1.5">
                     LinkedIn
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href={`mailto:${COMPANY.email}`}
-                    className="text-sm text-neu-muted hover:text-neu-accent transition-colors duration-300"
-                  >
+                  <a href={`mailto:${COMPANY.email}`} className="text-sm text-warm-muted hover:text-warm-hover transition-colors duration-200">
                     {COMPANY.email}
                   </a>
                 </li>
@@ -102,8 +72,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-neu-muted/20 text-center">
-            <p className="text-xs text-neu-muted">{COMPANY.copyright}</p>
+          <div className="mt-10 pt-6 border-t border-warm-border text-center">
+            <p className="text-xs text-warm-muted">{COMPANY.copyright}</p>
           </div>
         </div>
       </div>

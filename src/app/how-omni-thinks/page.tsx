@@ -2,320 +2,355 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import NeuCard from "@/components/ui/NeuCard";
-import NeuButton from "@/components/ui/NeuButton";
-import NeuIconBox from "@/components/ui/NeuIconBox";
+import Card from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/animations/ScrollReveal";
-import FloatingElement from "@/components/animations/FloatingElement";
 
-const FAQ_ITEMS = [
+/* ------------------------------------------------------------------ */
+/*  Data                                                               */
+/* ------------------------------------------------------------------ */
+
+const systems = [
   {
-    question: "Does OmnI act on its own?",
-    answer:
-      "No. OmnI does not act on its own. It observes live operations, reasons about possible outcomes, and supports human decisions. The operator always decides.",
+    num: "01",
+    label: "OmnI Brain",
+    title: "Learning Reality from Live Signals",
+    body: "OmnI Brain absorbs run rates, events, patterns, and anomalies from the line in real time. It replaces static thresholds with adaptive context \u2014 so the system understands what normal actually looks like right now, not what it looked like last quarter.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2l2.09 6.26L20 10l-5.91 1.74L12 18l-2.09-6.26L4 10l5.91-1.74L12 2z" />
+      </svg>
+    ),
   },
   {
-    question: "How is OmnI different from traditional analytics?",
-    answer:
-      "Dashboards describe the past. OmnI builds a living model of what is happening now and explores what may happen next — then explains this reasoning in plain language.",
+    num: "02",
+    label: "OmnI Cortex",
+    title: "Visual Reasoning and Prediction",
+    body: "OmnI Cortex simulates possible next steps and their likely consequences before they happen. Operators gain foresight \u2014 not just hindsight \u2014 so decisions are informed by what could happen, not only what already did.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+        <circle cx="12" cy="12" r="3" />
+      </svg>
+    ),
+    reversed: true,
   },
   {
-    question: "Is the reasoning transparent and explainable?",
-    answer:
-      "Every recommendation includes explanation of which signals mattered and why outcomes are likely. OmnI is designed to be inspectable — never a black box.",
-  },
-  {
-    question: "How accurate is OmnI?",
-    answer:
-      "OmnI presents informed possibilities, learns from outcomes, and improves over time. Human judgment remains essential — OmnI enhances it rather than replacing it.",
-  },
-  {
-    question: "Is OmnI a surveillance tool?",
-    answer:
-      "No. OmnI does not monitor or evaluate individual operator performance. It focuses on operational conditions, not personal metrics. It is a support system, not surveillance.",
-  },
-  {
-    question: "What if operators disagree with OmnI?",
-    answer:
-      "The operator always retains control. Disagreements are respected and incorporated into the learning model to improve future guidance.",
+    num: "03",
+    label: "Human-Aligned Guidance",
+    title: "Operator Co-Pilot",
+    body: "OmnI communicates in natural speech as a collaborative co-pilot. It explains what it sees, why it matters, and what could help \u2014 without dictating. The operator always decides.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 00-3-3.87" />
+        <path d="M16 3.13a4 4 0 010 7.75" />
+      </svg>
+    ),
   },
 ];
 
-function FAQItem({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div className={`rounded-[24px] transition-shadow duration-300 ${isOpen ? "neu-pressed" : "neu-flat"}`}>
-      <button
-        onClick={onToggle}
-        className="w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neu-accent focus-visible:ring-offset-2 focus-visible:ring-offset-neu-bg rounded-[24px]"
-      >
-        <span className="font-display font-semibold text-neu-fg text-[15px]">{question}</span>
-        <span className={`text-neu-accent text-lg transition-transform duration-300 shrink-0 ${isOpen ? "rotate-45" : ""}`}>
-          +
-        </span>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="overflow-hidden"
-          >
-            <p className="px-6 pb-6 text-neu-muted leading-relaxed text-[15px]">{answer}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
+const loopSteps = [
+  {
+    num: "01",
+    title: "Ingest",
+    body: "Live signals from sensors, SCADA, MES and operator inputs flow into OmnI continuously.",
+  },
+  {
+    num: "02",
+    title: "Learn",
+    body: "The Brain builds and refines a living model of how the line actually behaves under current conditions.",
+  },
+  {
+    num: "03",
+    title: "Simulate",
+    body: "The Cortex evaluates possible next states and ranks them by likelihood and impact.",
+  },
+  {
+    num: "04",
+    title: "Guide",
+    body: "Clear, explainable recommendations reach the operator \u2014 who decides the next move.",
+  },
+];
+
+const benefits = [
+  {
+    title: "Less Firefighting",
+    body: "Shift from reactive scrambles to proactive, signal-driven decisions that prevent losses before they cascade.",
+  },
+  {
+    title: "Faster Recovery",
+    body: "Contextual guidance means teams resolve issues in minutes instead of hours, with fewer missteps along the way.",
+  },
+  {
+    title: "Fewer Repeated Losses",
+    body: "OmnI remembers what worked and what didn\u2019t, so the same problems stop recurring shift after shift.",
+  },
+  {
+    title: "Human-Machine Collaboration",
+    body: "Operators bring judgement, OmnI brings memory and foresight. Together they outperform either alone.",
+  },
+];
+
+const faqs: { q: string; a: string }[] = [
+  {
+    q: "Does OmnI act on its own?",
+    a: "No. OmnI is a co-pilot, not an autopilot. It observes, reasons, and recommends \u2014 but the operator always makes the final decision. Control never leaves the floor.",
+  },
+  {
+    q: "How is OmnI different from traditional analytics?",
+    a: "Dashboards describe what happened in the past. OmnI builds a living model of how your line behaves right now, reasons forward about what could happen next, and offers guidance before problems arrive.",
+  },
+  {
+    q: "Is the reasoning transparent?",
+    a: "Every recommendation OmnI makes explains which signals mattered, why they were significant, and what trade-offs exist. There is no black box \u2014 operators and supervisors can always see the logic.",
+  },
+  {
+    q: "How accurate is OmnI?",
+    a: "OmnI does not claim certainty. It presents informed possibilities ranked by likelihood. As it observes more of your line\u2019s behaviour, its model improves and its recommendations become sharper over time.",
+  },
+  {
+    q: "Is OmnI a surveillance tool?",
+    a: "No. OmnI focuses on process conditions \u2014 run rates, temperatures, cycle times, patterns \u2014 not on personal performance metrics. It is designed to support operators, not monitor them.",
+  },
+  {
+    q: "What if operators disagree with a recommendation?",
+    a: "The operator retains full control and can override any suggestion. When they do, OmnI incorporates that disagreement as a learning signal, refining its future guidance.",
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/*  Page                                                               */
+/* ------------------------------------------------------------------ */
 
 export default function HowOmniThinksPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   return (
     <>
-      {/* Hero */}
-      <section className="py-24 md:py-36">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* -------- Hero -------- */}
+      <section className="py-28 md:py-40">
+        <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
-            <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-6">
-              How OmnI Thinks
-            </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-neu-fg leading-[1.08] max-w-4xl mx-auto">
-              Bridge AI, OI, OT and{" "}
-              <span className="text-neu-accent">Human Capital</span>
-            </h1>
-            <p className="mt-6 text-lg text-neu-muted leading-relaxed max-w-2xl mx-auto">
-              Co-pilot interaction, foresight, and explainable guidance — built
-              on three core systems working in harmony.
-            </p>
+            <div className="max-w-3xl">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+                How OmnI Thinks
+              </span>
+              <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
+                Bridge AI, OI, OT and{" "}
+                <span className="text-warm-accent">Human Capital</span>
+              </h1>
+              <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl">
+                OmnI is a co-pilot that interacts with your operators, builds
+                foresight from live signals, and delivers explainable guidance
+                &mdash; so the right decisions happen faster, with humans in
+                control.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Three Systems */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-28">
-          {/* Brain */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal direction="left">
-              <div>
-                <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-4">
-                  System 01
-                </span>
-                <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-neu-fg mb-4">
-                  OmnI Brain
-                </h2>
-                <p className="text-base text-neu-fg font-medium mb-4">
-                  Learning Reality from Live Signals
-                </p>
-                <p className="text-neu-muted leading-relaxed text-[15px]">
-                  Continuously absorbs run rates, events, patterns, and
-                  anomalies from production. Replaces static thresholds with
-                  adaptive, real-time context.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2}>
-              <div className="flex items-center justify-center">
-                <FloatingElement>
-                  <NeuCard className="w-44 h-44 md:w-52 md:h-52 flex items-center justify-center rounded-full">
-                    <NeuIconBox size="lg">
-                      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-                      </svg>
-                    </NeuIconBox>
-                  </NeuCard>
-                </FloatingElement>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          {/* Cortex */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal direction="left" className="order-2 lg:order-1">
-              <div className="flex items-center justify-center">
-                <FloatingElement speed="slow">
-                  <NeuCard className="w-44 h-44 md:w-52 md:h-52 flex items-center justify-center rounded-full">
-                    <NeuIconBox size="lg">
-                      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.64 0 8.577 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.64 0-8.577-3.007-9.963-7.178z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </NeuIconBox>
-                  </NeuCard>
-                </FloatingElement>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2} className="order-1 lg:order-2">
-              <div>
-                <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-4">
-                  System 02
-                </span>
-                <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-neu-fg mb-4">
-                  OmnI Cortex
-                </h2>
-                <p className="text-base text-neu-fg font-medium mb-4">
-                  Visual Reasoning and Prediction
-                </p>
-                <p className="text-neu-muted leading-relaxed text-[15px]">
-                  Simulates possible next steps and outcomes. Operators gain
-                  foresight into consequences before events occur — turning
-                  reactive firefighting into proactive guidance.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          {/* Cobot */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal direction="left">
-              <div>
-                <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-4">
-                  System 03
-                </span>
-                <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-neu-fg mb-4">
-                  Human-Aligned Guidance
-                </h2>
-                <p className="text-base text-neu-fg font-medium mb-4">
-                  Operator Co-Pilot
-                </p>
-                <p className="text-neu-muted leading-relaxed text-[15px]">
-                  Natural speech communication that functions as a collaborative
-                  co-pilot. It listens, suggests, and explains — while keeping
-                  the operator in control.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2}>
-              <div className="flex items-center justify-center">
-                <FloatingElement delay>
-                  <NeuCard className="w-44 h-44 md:w-52 md:h-52 flex items-center justify-center rounded-full">
-                    <NeuIconBox size="lg">
-                      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                      </svg>
-                    </NeuIconBox>
-                  </NeuCard>
-                </FloatingElement>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Intelligence Loop */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* -------- Three Systems -------- */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
-            tag="The Intelligence Loop"
-            title="Continuous Learning and Action"
-            subtitle="Transparent, auditable, and action-focused — never a black box."
+            tag="Architecture"
+            title="Three systems, one intelligence"
+            subtitle="Each layer builds on the one before it &mdash; from raw signals to human-ready guidance."
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "Ingest", description: "Absorb live signals from the production floor." },
-              { step: "02", title: "Learn", description: "Build patterns from real operational behavior." },
-              { step: "03", title: "Simulate", description: "Model possible futures and their consequences." },
-              { step: "04", title: "Guide", description: "Deliver contextual, explainable next steps." },
-            ].map((item, i) => (
-              <ScrollReveal key={item.step} delay={i * 0.08}>
-                <NeuCard hover className="p-7 h-full text-center relative overflow-hidden">
-                  <span className="absolute top-2 right-4 font-display text-5xl font-extrabold text-neu-fg/5">
-                    {item.step}
+
+          <div className="flex flex-col gap-20">
+            {systems.map((sys, i) => {
+              const textBlock = (
+                <div className="flex flex-col justify-center">
+                  <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+                    System {sys.num} &mdash; {sys.label}
                   </span>
-                  <div className="w-10 h-10 rounded-xl bg-neu-accent/10 flex items-center justify-center mb-5 mx-auto">
-                    <span className="font-display font-bold text-neu-accent text-sm">{item.step}</span>
-                  </div>
-                  <h3 className="font-display text-base font-bold text-neu-fg mb-2">
-                    {item.title}
+                  <h3 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-warm-fg mb-4">
+                    {sys.title}
                   </h3>
-                  <p className="text-sm text-neu-muted leading-relaxed">
-                    {item.description}
+                  <p className="text-[15px] text-warm-muted leading-relaxed">
+                    {sys.body}
                   </p>
-                </NeuCard>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+                </div>
+              );
 
-      {/* Decision Maker Benefits */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading tag="For Decision Makers" title="What You Get" />
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { title: "Less Firefighting", description: "Clear foresight into what could go wrong next." },
-              { title: "Faster Recovery", description: "Operators guided with context-rich, explainable suggestions." },
-              { title: "Fewer Repeated Losses", description: "Know the operational consequence before it impacts your KPIs." },
-              { title: "Human-Machine Collaboration", description: "Natural speech interaction makes insights actionable." },
-            ].map((benefit, i) => (
-              <ScrollReveal key={benefit.title} delay={i * 0.08}>
-                <NeuCard hover className="p-7 flex gap-5 items-start">
-                  <NeuIconBox size="sm" className="shrink-0 mt-0.5">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  </NeuIconBox>
-                  <div>
-                    <h3 className="font-display text-base font-bold text-neu-fg mb-1">{benefit.title}</h3>
-                    <p className="text-sm text-neu-muted leading-relaxed">{benefit.description}</p>
+              const cardBlock = (
+                <Card className="p-10 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg bg-surface-3 flex items-center justify-center text-warm-accent">
+                    {sys.icon}
                   </div>
-                </NeuCard>
+                </Card>
+              );
+
+              return (
+                <ScrollReveal key={sys.num} delay={i * 0.08}>
+                  <div className="grid md:grid-cols-2 gap-10 items-center">
+                    {sys.reversed ? (
+                      <>
+                        {cardBlock}
+                        {textBlock}
+                      </>
+                    ) : (
+                      <>
+                        {textBlock}
+                        {cardBlock}
+                      </>
+                    )}
+                  </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* -------- Intelligence Loop -------- */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <SectionHeading
+            tag="Intelligence Loop"
+            title="A continuous cycle of learning"
+            subtitle="OmnI never stops observing, reasoning, and refining &mdash; every shift sharpens the model."
+          />
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {loopSteps.map((step, i) => (
+              <ScrollReveal key={step.num} delay={i * 0.08}>
+                <Card hover className="p-7 h-full">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                    {step.num}
+                  </span>
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-[15px] text-warm-muted leading-relaxed">
+                    {step.body}
+                  </p>
+                </Card>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading tag="FAQ" title="Frequently Asked Questions" />
-          <div className="space-y-4">
-            {FAQ_ITEMS.map((item, i) => (
-              <ScrollReveal key={i} delay={i * 0.04}>
-                <FAQItem
-                  question={item.question}
-                  answer={item.answer}
-                  isOpen={openFAQ === i}
-                  onToggle={() => setOpenFAQ(openFAQ === i ? null : i)}
-                />
+      {/* -------- Decision Maker Benefits -------- */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <SectionHeading
+            tag="For Decision Makers"
+            title="Why it matters to the business"
+            subtitle="Tangible outcomes that leadership can measure from day one."
+          />
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((b, i) => (
+              <ScrollReveal key={b.title} delay={i * 0.06}>
+                <Card hover className="p-7 h-full">
+                  <div className="flex gap-4 items-start">
+                    <span className="mt-0.5 shrink-0 w-6 h-6 rounded-full bg-surface-3 flex items-center justify-center text-warm-accent">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 className="font-display text-[15px] font-semibold tracking-tight text-warm-fg mb-1.5">
+                        {b.title}
+                      </h3>
+                      <p className="text-[15px] text-warm-muted leading-relaxed">
+                        {b.body}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* -------- FAQ -------- */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <SectionHeading
+            tag="FAQ"
+            title="Frequently asked questions"
+          />
+
+          <div className="max-w-3xl mx-auto flex flex-col gap-3">
+            {faqs.map((faq, i) => {
+              const isOpen = openFAQ === i;
+              return (
+                <ScrollReveal key={i} delay={i * 0.04}>
+                  <div
+                    className={`rounded-lg border border-warm-border transition-colors duration-200 ${
+                      isOpen ? "bg-surface-2" : ""
+                    }`}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setOpenFAQ(isOpen ? null : i)}
+                      className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
+                    >
+                      <span className="font-display text-[15px] font-semibold tracking-tight text-warm-fg">
+                        {faq.q}
+                      </span>
+                      <span
+                        className="shrink-0 text-warm-muted transition-transform duration-200"
+                        style={{
+                          transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+                        }}
+                      >
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                          <line x1="8" y1="2" x2="8" y2="14" />
+                          <line x1="2" y1="8" x2="14" y2="8" />
+                        </svg>
+                      </span>
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          key="answer"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+                          className="overflow-hidden"
+                        >
+                          <p className="px-6 pb-5 text-[15px] text-warm-muted leading-relaxed">
+                            {faq.a}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* -------- CTA -------- */}
+      <section className="py-20">
+        <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
-            <NeuCard className="p-10 md:p-16 text-center">
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-neu-fg mb-4">
-                See OmnI Think in Action
+            <Card className="p-10 md:p-14 text-center">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-warm-fg mb-3">
+                See OmnI think in action
               </h2>
-              <p className="text-base text-neu-muted mb-8 max-w-2xl mx-auto leading-relaxed">
-                Experience how the Brain, Cortex, and Co-pilot work together on
-                your real production data.
+              <p className="text-warm-muted mb-8 max-w-xl mx-auto leading-relaxed">
+                Bring a real line, a real shift, and a real problem. We will show
+                you how OmnI reasons through it &mdash; live.
               </p>
-              <NeuButton href="/contact" size="lg">
-                Get in Touch
-              </NeuButton>
-            </NeuCard>
+              <Button href="/contact" variant="accent" size="lg">
+                Request a Demo
+              </Button>
+            </Card>
           </ScrollReveal>
         </div>
       </section>

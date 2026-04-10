@@ -1,8 +1,7 @@
 "use client";
 
-import NeuCard from "@/components/ui/NeuCard";
-import NeuButton from "@/components/ui/NeuButton";
-import NeuIconBox from "@/components/ui/NeuIconBox";
+import Card from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 
@@ -10,177 +9,273 @@ export default function InsightsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-24 md:py-36">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-28 md:py-40">
+        <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
-            <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-6">
-              Insights
-            </span>
-            <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-neu-fg leading-[1.3] max-w-3xl mx-auto">
-              OmnI NAVIGATION does not manage by reports or targets. It watches
-              reality as it happens, learns how your line truly behaves, and
-              guides operators with clear next steps —{" "}
-              <span className="text-neu-accent">
-                before problems become losses.
+            <div className="max-w-3xl mx-auto text-center">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+                Insights
               </span>
-            </h1>
+              <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-warm-fg leading-[1.2]">
+                OmnI NAVIGATION does not manage by reports or targets. It watches
+                reality as it happens, learns how your line truly behaves, and
+                guides operators with clear next steps &mdash;{" "}
+                <span className="text-warm-accent">
+                  before problems become losses.
+                </span>
+              </h1>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Philosophy */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20">
+        <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
-            <NeuCard variant="pressed" className="p-10 md:p-14">
-              <p className="font-display text-xl md:text-2xl font-semibold text-neu-fg leading-relaxed">
-                Operations are not only a set of KPIs. They are a{" "}
-                <span className="text-neu-accent">
+            <Card variant="inset" className="p-8 md:p-12 text-center">
+              <p className="text-lg md:text-xl leading-relaxed text-warm-fg mb-4">
+                &ldquo;Operations are not only a set of KPIs. They are a{" "}
+                <strong>
                   living system of flow, signals, and human decisions.
-                </span>
+                </strong>
+                &rdquo;
               </p>
-              <p className="mt-4 text-neu-muted text-[15px]">
-                Moving away from managing through hindsight toward navigating in
-                the present.
+              <p className="text-[15px] text-warm-muted leading-relaxed">
+                OmnI helps you navigate in the present &mdash; not explain the
+                past.
               </p>
-            </NeuCard>
+            </Card>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Reality As Is */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal direction="left">
+      {/* 01 — Reality "As Is" */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <ScrollReveal>
               <div>
-                <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-4">
-                  01 — Reality &ldquo;As Is&rdquo;
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
+                  01 &mdash; Reality &ldquo;As Is&rdquo;
                 </span>
-                <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-neu-fg mb-6">
-                  Making the Invisible Visible
+                <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-5">
+                  Making the invisible visible
                 </h2>
-                <p className="text-neu-muted leading-relaxed mb-4 text-[15px]">
-                  Like the mantis shrimp that perceives the world through 16
-                  different photoreceptors — detecting ultraviolet and polarised
-                  light far beyond human capacity — OmnI uses technology to
-                  extend our senses beyond the limits of the human eye and
-                  brain.
+                <p className="text-[15px] text-warm-muted leading-relaxed mb-4">
+                  The mantis shrimp has sixteen types of colour receptor. Humans
+                  have three. It does not see &ldquo;more&rdquo; &mdash; it sees
+                  differently: ultraviolet, polarized light, signals invisible to
+                  every other creature on the reef.
                 </p>
-                <p className="text-neu-fg font-medium leading-relaxed text-[15px]">
-                  True intelligence does not see more of the same — it reveals
-                  what was always there but invisible to us.
+                <p className="text-[15px] text-warm-muted leading-relaxed mb-4">
+                  Most factory systems are built for human-scale vision &mdash;
+                  three receptors. They show what is obvious. OmnI is built like
+                  the mantis shrimp. It reads signals your current systems cannot
+                  separate: micro-timing between events, rhythm changes across
+                  shifts, operator patterns no report will ever surface.
+                </p>
+                <p className="text-[15px] text-warm-fg font-medium leading-relaxed">
+                  Reality &ldquo;as is&rdquo; is not about collecting more data.
+                  It is about perceiving what was always there &mdash; but never
+                  visible.
                 </p>
               </div>
             </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2}>
-              <NeuCard className="p-8 md:p-10 text-center">
-                <p className="text-neu-muted leading-relaxed text-[15px]">
-                  While we see the world by mixing three primary colours, the
-                  mantis shrimp has up to 16 different photoreceptors. It can
-                  detect ultraviolet light and polarised light — seeing
-                  dimensions of reality invisible to us.
+            <ScrollReveal delay={0.12}>
+              <Card className="p-8 md:p-10">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-3">
+                  The Mantis Shrimp Principle
+                </h3>
+                <p className="text-[15px] text-warm-muted leading-relaxed mb-4">
+                  With sixteen photoreceptor types, the mantis shrimp does not
+                  simply see more colours. It perceives entire dimensions of
+                  light &mdash; ultraviolet bands, circular polarization &mdash;
+                  that other species cannot detect at all.
                 </p>
-              </NeuCard>
+                <p className="text-[15px] text-warm-muted leading-relaxed">
+                  OmnI applies the same principle to operations: not more
+                  dashboards, but a fundamentally different way of reading what
+                  your line is doing right now.
+                </p>
+              </Card>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Flow vs Results */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 02 — Observing Flow */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="02 — Observing Flow"
-            title="Results Tell You What Happened. Flow Tells You What Happens Next."
+            title="How OmnI reads your line"
+            subtitle="The difference between measuring results and observing flow."
           />
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+
+          {/* Comparison cards */}
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
             <ScrollReveal>
-              <NeuCard variant="pressed" className="p-8 h-full">
-                <h3 className="font-display text-lg font-bold text-neu-secondary mb-4">
+              <Card variant="inset" className="p-7 h-full">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-warm-muted mb-3">
                   Traditional: Results
                 </h3>
-                <p className="text-neu-muted leading-relaxed text-[15px]">
-                  Like measuring the water level once a day — you know what
-                  happened but not why or what comes next.
-                </p>
-              </NeuCard>
+                <ul className="space-y-2.5">
+                  {[
+                    "Measures output after the fact",
+                    "Compares against static targets",
+                    "Explains what happened yesterday",
+                    "Treats symptoms, not causes",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2.5 text-[15px] text-warm-muted leading-snug"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-warm-muted mt-2 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
             </ScrollReveal>
-            <ScrollReveal delay={0.12}>
-              <NeuCard className="p-8 h-full">
-                <h3 className="font-display text-lg font-bold text-neu-accent mb-4">
+            <ScrollReveal delay={0.08}>
+              <Card className="p-7 h-full">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-warm-accent mb-3">
                   OmnI: Flow
                 </h3>
-                <p className="text-neu-muted leading-relaxed text-[15px]">
-                  Like watching how the river actually moves — where it narrows,
-                  where it gets blocked, where it overflows.
-                </p>
-              </NeuCard>
+                <ul className="space-y-2.5">
+                  {[
+                    "Observes rhythm and behaviour in real time",
+                    "Detects pattern shifts before they surface as losses",
+                    "Guides operators toward better next steps",
+                    "Learns continuously from actual conditions",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2.5 text-[15px] text-warm-fg leading-snug"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-warm-accent mt-2 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
             </ScrollReveal>
           </div>
 
-          <ScrollReveal>
-            <NeuCard className="p-8">
-              <h3 className="font-display text-base font-bold text-neu-fg mb-5">
+          {/* How OmnI observes flow */}
+          <ScrollReveal delay={0.12}>
+            <Card className="p-7 md:p-10">
+              <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-6">
                 How OmnI observes flow
               </h3>
-              <div className="grid md:grid-cols-2 gap-3">
+              <div className="space-y-3">
                 {[
-                  "Watches the real flow, minute by minute",
-                  "Learns how this factory actually behaves",
-                  "Sees when flow starts to bend, slow, or break",
-                  "Suggests the next best action, before red appears",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 p-3.5 rounded-xl neu-pressed-sm">
-                    <span className="text-neu-accent font-display font-bold text-sm w-5 shrink-0">
-                      {i + 1}
+                  {
+                    n: "1",
+                    title: "Signal Ingestion",
+                    desc: "Collects live signals from machines, sensors, PLCs, and operator inputs without disrupting existing systems.",
+                  },
+                  {
+                    n: "2",
+                    title: "Rhythm Detection",
+                    desc: "Maps the natural cadence of your line — cycle times, micro-stops, changeover patterns, shift behaviour.",
+                  },
+                  {
+                    n: "3",
+                    title: "Deviation Recognition",
+                    desc: "Identifies when flow drifts from its learned rhythm, before deviations compound into visible losses.",
+                  },
+                  {
+                    n: "4",
+                    title: "Contextual Correlation",
+                    desc: "Connects signals across sources to understand why flow is changing — not just that it changed.",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.n}
+                    className="flex items-start gap-4 bg-surface-3 border border-warm-border rounded-lg p-4"
+                  >
+                    <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-4 text-warm-accent font-display text-xs font-semibold shrink-0">
+                      {item.n}
                     </span>
-                    <span className="text-sm text-neu-fg">{item}</span>
+                    <div>
+                      <h4 className="font-display text-[15px] font-semibold tracking-tight text-warm-fg mb-0.5">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm text-warm-muted leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
-            </NeuCard>
+            </Card>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Signal Integration */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal direction="left">
+      {/* 03 — Unified Signals */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <ScrollReveal>
               <div>
-                <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-4">
-                  03 — Unified Signals
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
+                  03 &mdash; Unified Signals
                 </span>
-                <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-neu-fg mb-6">
-                  One Unified Signal Stream
+                <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-5">
+                  One intelligence, all signals
                 </h2>
-                <p className="text-neu-muted leading-relaxed text-[15px]">
-                  Operations don&apos;t fail because the plan is wrong — they
-                  fail because reality changes faster than rules can. OmnI
-                  treats events, stops, alarms, and human behavior as one
-                  unified signal stream.
+                <p className="text-[15px] text-warm-muted leading-relaxed">
+                  Traditional systems keep data in silos &mdash; quality in one
+                  tool, maintenance in another, production in a third. OmnI
+                  unifies all signals into a single living model, so guidance is
+                  always based on the full picture, not fragments.
                 </p>
               </div>
             </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2}>
-              <div className="space-y-3">
+            <ScrollReveal delay={0.1}>
+              <div className="space-y-4">
                 {[
-                  { title: "Signal Integration", desc: "Machine data, process context, and human actions become one timeline." },
-                  { title: "Pattern Learning", desc: "OmnI learns which small signals usually lead to big losses." },
-                  { title: "Adaptive Guidance", desc: "Advice changes based on this line, this product, this crew, right now." },
-                  { title: "Outcome Reinforcement", desc: "What works is strengthened; what fails is corrected." },
+                  {
+                    n: "01",
+                    title: "Signal Integration",
+                    desc: "Machine data, operator input, quality events, and environmental signals — combined into one stream.",
+                  },
+                  {
+                    n: "02",
+                    title: "Pattern Learning",
+                    desc: "OmnI learns what normal looks like for your specific line, shift, and product mix.",
+                  },
+                  {
+                    n: "03",
+                    title: "Adaptive Guidance",
+                    desc: "Recommendations adjust as conditions change — no static rules, no outdated thresholds.",
+                  },
+                  {
+                    n: "04",
+                    title: "Outcome Reinforcement",
+                    desc: "Every action taken feeds back into the model, making guidance sharper over time.",
+                  },
                 ].map((item, i) => (
-                  <NeuCard key={item.title} variant="subtle" className="p-5 flex gap-4 items-start">
-                    <div className="w-8 h-8 rounded-lg neu-pressed-deep flex items-center justify-center text-neu-accent font-display font-bold text-xs shrink-0">
-                      {i + 1}
-                    </div>
-                    <div>
-                      <h4 className="font-display font-bold text-neu-fg text-sm mb-0.5">{item.title}</h4>
-                      <p className="text-sm text-neu-muted">{item.desc}</p>
-                    </div>
-                  </NeuCard>
+                  <ScrollReveal key={item.n} delay={0.1 + i * 0.06}>
+                    <Card variant="raised" className="p-5">
+                      <div className="flex items-start gap-4">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-4 text-warm-accent font-display text-xs font-semibold shrink-0">
+                          {item.n}
+                        </span>
+                        <div>
+                          <h4 className="font-display text-[15px] font-semibold tracking-tight text-warm-fg mb-0.5">
+                            {item.title}
+                          </h4>
+                          <p className="text-sm text-warm-muted leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+                    </Card>
+                  </ScrollReveal>
                 ))}
               </div>
             </ScrollReveal>
@@ -189,112 +284,171 @@ export default function InsightsPage() {
       </section>
 
       {/* Floor Benefits */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading tag="On the Floor" title="Guidance That Fits Your Shift" />
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <SectionHeading
+            tag="On the Floor"
+            title="Guidance that fits your shift"
+          />
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              "You don't get generic instructions. You get guidance that fits your shift.",
-              "OmnI notices early signals before big problems start.",
-              "Advice changes when conditions change — not tomorrow, but during the shift.",
-              "Good practices from experienced operators are learned and shared automatically.",
-            ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 0.08}>
-                <NeuCard hover className="p-6 flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-neu-accent mt-2.5 shrink-0" />
-                  <p className="text-neu-fg leading-relaxed text-[15px]">{item}</p>
-                </NeuCard>
+              "\"I used to spend the first 20 minutes of every shift figuring out what went wrong on the previous one. Now I just look at the screen and know where to start.\"",
+              "\"It does not tell me what to do. It tells me what it sees and what it thinks will happen. I decide. That is the difference.\"",
+              "\"Changeovers used to be chaos. OmnI shows us the pattern — which steps drift, which ones stay tight. We improved without a single new SOP.\"",
+              "\"The night shift used to be invisible. Now supervisors can see what happened, why it happened, and what the team tried. No blame — just learning.\"",
+            ].map((quote, i) => (
+              <ScrollReveal key={i} delay={i * 0.06}>
+                <Card hover className="p-7 h-full">
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-warm-accent mt-2 shrink-0" />
+                    <p className="text-[15px] text-warm-muted leading-relaxed italic">
+                      {quote}
+                    </p>
+                  </div>
+                </Card>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Shift Handover */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 04 — Shift Handover */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="04 — Shift Handover"
-            title="From Proving the Past to Understanding the Present"
+            title="From lost context to living continuity"
           />
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             <ScrollReveal>
-              <NeuCard variant="pressed" className="p-8 h-full">
-                <h3 className="font-display text-lg font-bold text-neu-secondary mb-4">Before</h3>
-                <p className="text-neu-muted leading-relaxed text-[15px]">
-                  Checklist-based, KPI ritual, &ldquo;what went wrong&rdquo;
-                  interrogation. Shift handover as blame session.
-                </p>
-              </NeuCard>
-            </ScrollReveal>
-            <ScrollReveal delay={0.12}>
-              <NeuCard className="p-8 h-full">
-                <h3 className="font-display text-lg font-bold text-neu-accent mb-4">After</h3>
-                <p className="text-neu-muted leading-relaxed mb-4 text-[15px]">
-                  A visual understanding round — the next shift knows exactly
-                  where to look and why:
-                </p>
-                <ul className="space-y-2">
+              <Card variant="inset" className="p-7 h-full">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-warm-muted mb-4">
+                  Before
+                </h3>
+                <ul className="space-y-3">
                   {[
-                    "What actually changed in the last hour",
-                    "Which actions are still open",
-                    "What helped recovery",
-                    "Where attention is needed now",
+                    "Verbal handover — key details lost or forgotten",
+                    "Incoming shift starts blind, repeats previous mistakes",
+                    "No record of what was tried and what worked",
+                    "Supervisors reconstruct events from memory",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm text-neu-muted">
-                      <svg className="w-4 h-4 text-neu-accent mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    <li
+                      key={item}
+                      className="flex items-start gap-2.5 text-[15px] text-warm-muted leading-snug"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-warm-muted mt-2 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </ScrollReveal>
+            <ScrollReveal delay={0.08}>
+              <Card className="p-7 h-full">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-4">
+                  After
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    "Automatic shift summary with key events and actions taken",
+                    "Incoming shift sees live context and open guidance",
+                    "Full traceability of what was tried, with outcomes",
+                    "Supervisors review shifts remotely with complete clarity",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2.5 text-[15px] text-warm-fg leading-snug"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="w-4 h-4 text-warm-accent shrink-0 mt-0.5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M4.5 12.75l6 6 9-13.5"
+                        />
                       </svg>
                       {item}
                     </li>
                   ))}
                 </ul>
-              </NeuCard>
+              </Card>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Quiet Shifts */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 05 — Quiet Shifts */}
+      <section className="py-20">
+        <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
-            <NeuCard className="p-10 md:p-16 text-center">
-              <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-4">
-                05 — The Goal
+            <Card className="p-8 md:p-12 text-center">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
+                05 &mdash; The Goal
               </span>
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-neu-fg mb-4">
-                Quiet Shifts
+              <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-4">
+                Quiet shifts
               </h2>
-              <p className="text-base text-neu-muted max-w-2xl mx-auto leading-relaxed">
-                No drama. No heroics. Just stable flow — because small risks
-                were handled early. The best shift is the one where nothing went
-                wrong at all.
+              <p className="text-[15px] text-warm-muted leading-relaxed max-w-xl mx-auto">
+                The best shifts are not the ones with heroic saves. They are the
+                ones where nothing dramatic happens &mdash; because flow was
+                stable, guidance was early, and people acted before problems
+                compounded. No drama. No firefighting. Just steady, confident
+                production.
               </p>
-            </NeuCard>
+            </Card>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Business Value */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading tag="Business Value" title="Stop Reacting. Start Guiding." />
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <SectionHeading
+            tag="Business Value"
+            title="What OmnI delivers"
+            subtitle="Measurable impact from the first shift."
+          />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Predict Next", desc: "Instead of explaining what already happened." },
-              { title: "50% Less NVA", desc: "Systematic waste reduction from real operations." },
-              { title: "Voice Co-Pilot", desc: "Guidance that feels collaborative, not robotic." },
-              { title: "Unified Intelligence", desc: "AI, OI, OT, and people in one layer." },
+              {
+                n: "01",
+                title: "Predict Next",
+                body: "Anticipate disturbances before they become losses. Guidance arrives before the problem does.",
+              },
+              {
+                n: "02",
+                title: "50% Less NVA",
+                body: "Reduce non-value-added time by targeting the real causes, not the symptoms visible in reports.",
+              },
+              {
+                n: "03",
+                title: "Voice Co-Pilot",
+                body: "Operators interact naturally. OmnI listens, understands context, and responds with clear next steps.",
+              },
+              {
+                n: "04",
+                title: "Unified Intelligence",
+                body: "One model that connects quality, production, and maintenance signals into coherent operational guidance.",
+              },
             ].map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.08}>
-                <NeuCard hover className="p-7 h-full text-center">
-                  <div className="w-10 h-10 rounded-xl bg-neu-accent/10 flex items-center justify-center mb-4 mx-auto">
-                    <span className="font-display font-bold text-neu-accent text-sm">0{i + 1}</span>
-                  </div>
-                  <h3 className="font-display text-base font-bold text-neu-fg mb-1">{item.title}</h3>
-                  <p className="text-sm text-neu-muted">{item.desc}</p>
-                </NeuCard>
+              <ScrollReveal key={item.n} delay={i * 0.06}>
+                <Card hover className="p-6 h-full">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                    {item.n}
+                  </span>
+                  <h3 className="font-display text-[15px] font-semibold tracking-tight text-warm-fg mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-warm-muted leading-relaxed">
+                    {item.body}
+                  </p>
+                </Card>
               </ScrollReveal>
             ))}
           </div>
@@ -302,20 +456,22 @@ export default function InsightsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20">
+        <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
-            <NeuCard className="p-10 md:p-16 text-center">
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-neu-fg mb-4">
-                Ready to Navigate, Not Just Report?
+            <Card className="p-10 md:p-14 text-center">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-warm-fg mb-3">
+                See OmnI on your line
               </h2>
-              <p className="text-base text-neu-muted mb-8 max-w-2xl mx-auto leading-relaxed">
-                Get insights on operational intelligence and decision-making.
+              <p className="text-warm-muted mb-8 max-w-xl mx-auto leading-relaxed">
+                No slides. No generic demos. We work with your real data, your
+                real shifts, and your real challenges. One line is all it takes
+                to see the difference.
               </p>
-              <NeuButton href="/contact" size="lg">
-                Get in Touch
-              </NeuButton>
-            </NeuCard>
+              <Button href="/contact" variant="accent" size="lg">
+                Request a Demo
+              </Button>
+            </Card>
           </ScrollReveal>
         </div>
       </section>

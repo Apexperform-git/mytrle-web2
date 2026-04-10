@@ -1,8 +1,7 @@
 "use client";
 
-import NeuCard from "@/components/ui/NeuCard";
-import NeuButton from "@/components/ui/NeuButton";
-import NeuIconBox from "@/components/ui/NeuIconBox";
+import Card from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 
@@ -10,112 +9,133 @@ export default function HowItWorksPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-24 md:py-36">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-28 md:py-40">
+        <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
-            <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-6">
-              How it Works
-            </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-neu-fg leading-[1.08] max-w-4xl mx-auto">
-              Reduce Firefighting.{" "}
-              <span className="text-neu-accent">Reveal What Matters Next.</span>
-            </h1>
-            <p className="mt-6 text-lg text-neu-muted leading-relaxed max-w-2xl mx-auto">
-              Bridge AI, Operational Intelligence, OT and Human Capital — and
-              cut Non-Value-Added time by 50% or more.
-            </p>
+            <div className="max-w-3xl">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+                How it Works
+              </span>
+              <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
+                Reduce firefighting.
+                <br />
+                <span className="text-warm-accent">
+                  Reveal what matters next.
+                </span>
+              </h1>
+              <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl">
+                Bridge AI, Operational Intelligence, OT and Human Capital
+                &mdash; and cut Non-Value-Added time by 50% or more.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Reality */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal direction="left">
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <ScrollReveal>
               <div>
-                <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-4">
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
                   Reality
                 </span>
-                <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-neu-fg mb-6">
-                  OmnI Looks at What Is Really Happening
+                <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-5">
+                  OmnI looks at what is really happening
                 </h2>
-                <p className="text-neu-muted leading-relaxed mb-5">
-                  Not what should happen. Not what was planned. But what is
-                  happening now. It watches the process flow, the signals, the
-                  stops, the rhythm of the line. Minute by minute.
+                <p className="text-[15px] text-warm-muted leading-relaxed mb-4">
+                  Rather than relying on batch reports or end-of-shift
+                  summaries, OmnI watches your process flow minute by minute.
+                  It captures the full picture &mdash; from machine signals
+                  and operator actions to environmental context &mdash; and
+                  builds a living model of how your line actually behaves.
                 </p>
-                <p className="text-neu-muted leading-relaxed">
-                  From this, OmnI learns how your process truly behaves — what
-                  works, what causes loss, what helps recovery, and what makes
-                  things worse.
+                <p className="text-[15px] text-warm-muted leading-relaxed">
+                  Over time it learns what normal looks like for each product,
+                  each shift, each configuration. It recognises deviations
+                  before they cascade and connects upstream causes to
+                  downstream effects, so your teams can act on reality instead
+                  of assumption.
                 </p>
               </div>
             </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2}>
-              <NeuCard className="p-8">
+
+            <ScrollReveal delay={0.12}>
+              <Card className="p-6">
                 <div className="space-y-3">
                   {[
-                    { label: "What works", mark: "+" },
-                    { label: "What causes loss", mark: "!" },
-                    { label: "What helps recovery", mark: "~" },
-                    { label: "What makes things worse", mark: "-" },
+                    { mark: "+", label: "What works" },
+                    { mark: "!", label: "What causes loss" },
+                    { mark: "~", label: "What helps recovery" },
+                    { mark: "-", label: "What makes things worse" },
                   ].map((item) => (
                     <div
-                      key={item.label}
-                      className="flex items-center gap-4 p-4 rounded-2xl neu-pressed-sm"
+                      key={item.mark}
+                      className="bg-surface-3 border border-warm-border rounded-lg p-3.5 flex items-center gap-4"
                     >
-                      <div className="w-9 h-9 rounded-xl neu-pressed-deep flex items-center justify-center text-neu-accent font-display font-bold text-sm shrink-0">
+                      <span className="w-8 h-8 rounded bg-surface-4 flex items-center justify-center text-warm-accent font-display text-sm font-semibold shrink-0">
                         {item.mark}
-                      </div>
-                      <span className="font-medium text-neu-fg text-[15px]">{item.label}</span>
+                      </span>
+                      <span className="text-[15px] text-warm-fg font-medium">
+                        {item.label}
+                      </span>
                     </div>
                   ))}
                 </div>
-              </NeuCard>
+              </Card>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* Foresight */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal direction="left" className="order-2 lg:order-1">
-              <NeuCard variant="pressed" className="p-8 md:p-10">
-                <p className="text-neu-muted leading-relaxed mb-4">
-                  Yesterday, the line looked fine. Same speed. Same product.
-                  Same plan. But halfway through the shift, small things started
-                  to change. A tiny delay here. A short stop there.
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <ScrollReveal className="order-2 lg:order-1">
+              <Card variant="inset" className="p-8 md:p-10">
+                <p className="text-[15px] text-warm-muted leading-relaxed mb-4">
+                  When a micro-stop pattern emerges on Line 3, OmnI does not
+                  simply flag the anomaly. It reasons about what is likely to
+                  happen next based on thousands of similar sequences it has
+                  already observed.
                 </p>
-                <p className="text-neu-fg font-medium leading-relaxed mb-4">
-                  Most systems wait. They only speak up when it&apos;s already
-                  wrong.
+                <p className="text-[15px] text-warm-muted leading-relaxed mb-4">
+                  It might suggest that the current behaviour leads to a
+                  full stoppage within 40 minutes &mdash; and that a brief
+                  cleaning intervention now has an 80% chance of preventing
+                  it. The operator sees the reasoning, not just the
+                  recommendation.
                 </p>
-                <p className="text-neu-accent font-display font-semibold text-lg leading-relaxed">
-                  OmnI watches differently. It doesn&apos;t wait for a stop. It
-                  notices the signs before the stop.
+                <p className="text-[15px] text-warm-muted leading-relaxed">
+                  This is not prediction for prediction&rsquo;s sake. It is
+                  foresight designed to keep humans ahead of the process,
+                  making better decisions with less stress and fewer
+                  surprises.
                 </p>
-              </NeuCard>
+              </Card>
             </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2} className="order-1 lg:order-2">
+
+            <ScrollReveal delay={0.12} className="order-1 lg:order-2">
               <div>
-                <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-neu-accent mb-4">
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
                   Foresight
                 </span>
-                <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-neu-fg mb-6">
-                  Stay One Step Ahead
+                <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-5">
+                  Stay one step ahead
                 </h2>
-                <p className="text-neu-muted leading-relaxed mb-5">
-                  OmnI quietly thinks ahead: &ldquo;If we keep going like this,
-                  trouble is likely. But if you adjust here, it stays
-                  stable.&rdquo; One small change saved almost forty minutes of
-                  recovery.
+                <p className="text-[15px] text-warm-muted leading-relaxed mb-4">
+                  Knowing what happened is useful. Knowing what is about to
+                  happen is transformative. OmnI continuously compares
+                  possible next steps and their likely consequences, giving
+                  teams the foresight to prevent losses rather than recover
+                  from them.
                 </p>
-                <p className="text-neu-muted leading-relaxed">
-                  The best shift is not the one with heroic fixes — it&apos;s
-                  the one where nothing went wrong at all.
+                <p className="text-[15px] text-warm-muted leading-relaxed">
+                  Every suggestion comes with an explanation: why this action,
+                  why now, and what the alternatives are. The operator decides.
+                  OmnI illuminates the path.
                 </p>
               </div>
             </ScrollReveal>
@@ -123,47 +143,49 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Key Capabilities */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Capabilities */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="Capabilities"
-            title="Stop Reacting. Start Guiding."
-            subtitle="Adaptive learning, real-time context, and natural co-pilot interaction turn data into confident action."
+            title="Stop reacting. Start guiding."
+            subtitle="Four capabilities that turn operational data into operator advantage."
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               {
+                n: "01",
                 title: "Predict Next",
-                description: "Predict what matters next instead of explaining what already happened.",
+                body: "Continuously compare likely next events, flag emerging risks, and suggest the highest-impact action before a loss occurs.",
               },
               {
+                n: "02",
                 title: "Reduce Waste",
-                description: "Systematically reduce Non-Value Added waste — at least a 50% reduction.",
+                body: "Identify and quantify non-value-added time at the activity level. Surface the micro-losses that batch reports miss.",
               },
               {
+                n: "03",
                 title: "Voice-Enabled",
-                description: "Operators empowered with voice-enabled insight so guidance feels collaborative.",
+                body: "Operators interact with OmnI through natural voice queries on the floor, keeping hands free and attention on the process.",
               },
               {
+                n: "04",
                 title: "Unified Layer",
-                description: "AI, OI, OT, and your people integrated into one operational intelligence layer.",
+                body: "Bridge OT signals, planning systems, and human context into a single operational picture that every role can act on.",
               },
             ].map((cap, i) => (
-              <ScrollReveal key={cap.title} delay={i * 0.08}>
-                <NeuCard hover className="p-7 h-full">
-                  <div className="w-10 h-10 rounded-xl bg-neu-accent/10 flex items-center justify-center mb-5">
-                    <span className="font-display font-bold text-neu-accent text-sm">
-                      0{i + 1}
-                    </span>
-                  </div>
-                  <h3 className="font-display text-base font-bold text-neu-fg mb-2">
+              <ScrollReveal key={cap.n} delay={i * 0.08}>
+                <Card hover className="p-7 h-full">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                    {cap.n}
+                  </span>
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-2">
                     {cap.title}
                   </h3>
-                  <p className="text-sm text-neu-muted leading-relaxed">
-                    {cap.description}
+                  <p className="text-[15px] text-warm-muted leading-relaxed">
+                    {cap.body}
                   </p>
-                </NeuCard>
+                </Card>
               </ScrollReveal>
             ))}
           </div>
@@ -171,48 +193,62 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Decision Maker Benefits */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="For Decision Makers"
-            title="Less Firefighting. Faster Recovery."
+            title="Less firefighting. Faster recovery."
             subtitle="More control during the shift — where it matters."
           />
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               {
                 title: "Less Firefighting",
-                description: "Clear foresight into what could go wrong next.",
+                body: "Earlier signals and clearer next steps mean fewer emergencies and less reactive chaos on the floor.",
               },
               {
                 title: "Faster Recovery",
-                description: "Operators guided with context-rich, explainable suggestions.",
+                body: "Contextual, explainable guidance helps teams recover from disruptions in minutes instead of hours.",
               },
               {
                 title: "Fewer Repeated Losses",
-                description: "Know the operational consequence before it impacts your KPIs.",
+                body: "Patterns that cause recurring waste are surfaced, documented, and systematically eliminated.",
               },
               {
                 title: "Human-Machine Collaboration",
-                description: "Natural speech interaction makes insights actionable at the moment of action.",
+                body: "OmnI amplifies operator judgement rather than replacing it, building trust and adoption from the start.",
               },
             ].map((benefit, i) => (
               <ScrollReveal key={benefit.title} delay={i * 0.08}>
-                <NeuCard hover className="p-7 flex gap-5 items-start">
-                  <NeuIconBox size="sm" className="shrink-0 mt-0.5">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  </NeuIconBox>
-                  <div>
-                    <h3 className="font-display text-base font-bold text-neu-fg mb-1">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-sm text-neu-muted leading-relaxed">
-                      {benefit.description}
-                    </p>
+                <Card hover className="p-7 h-full">
+                  <div className="flex items-start gap-4">
+                    <span className="w-8 h-8 rounded bg-surface-3 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        className="text-warm-accent"
+                      >
+                        <path
+                          d="M13.5 4.5L6.5 11.5L2.5 7.5"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 className="font-display text-[15px] font-semibold tracking-tight text-warm-fg mb-1.5">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-sm text-warm-muted leading-relaxed">
+                        {benefit.body}
+                      </p>
+                    </div>
                   </div>
-                </NeuCard>
+                </Card>
               </ScrollReveal>
             ))}
           </div>
@@ -220,34 +256,58 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Methodology */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="Methodology"
             title="Brown Paper Method & Value Stream Mapping"
-            subtitle="A proven combination for analyzing operations, identifying inefficiencies, and improving productivity."
+            subtitle="A proven, structured approach to understanding your operation before optimising it."
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { step: "01", title: "Data Collection", description: "Gathering real, filled-in operational documents from your actual processes." },
-              { step: "02", title: "As-Is Status", description: "Visual layout of processes showing document and information flow as they really are." },
-              { step: "03", title: "Value Stream Mapping", description: "Mapping every process step, highlighting value-added and non-value-added activities." },
-              { step: "04", title: "Analysis & Review", description: "Examining cycle times, changeover times, uptime, and workforce involvement." },
-              { step: "05", title: "Documentation", description: "Easy-to-understand findings with mini-flow copies for clear reference." },
-              { step: "06", title: "Collaborative Improvement", description: "Team engagement ensuring buy-in and collaborative solution development." },
+              {
+                n: "01",
+                title: "Data Collection",
+                body: "Gather live signals, operator input, and contextual data from the line to build an accurate picture of current performance.",
+              },
+              {
+                n: "02",
+                title: "As-Is Status",
+                body: "Map the current state of the process end to end, capturing every step, wait, and handoff as it actually happens today.",
+              },
+              {
+                n: "03",
+                title: "Value Stream Mapping",
+                body: "Distinguish value-added, non-value-added, and necessary non-value-added activities across the full flow.",
+              },
+              {
+                n: "04",
+                title: "Analysis & Review",
+                body: "Quantify losses, identify root causes, and prioritise improvement opportunities by impact and feasibility.",
+              },
+              {
+                n: "05",
+                title: "Documentation",
+                body: "Create clear, visual documentation of findings that every stakeholder can understand and act on.",
+              },
+              {
+                n: "06",
+                title: "Collaborative Improvement",
+                body: "Work with operators, team leads, and management to design and implement changes that stick.",
+              },
             ].map((step, i) => (
-              <ScrollReveal key={step.step} delay={i * 0.06}>
-                <NeuCard variant="subtle" className="p-6 h-full relative overflow-hidden">
-                  <span className="absolute top-3 right-4 font-display text-5xl font-extrabold text-neu-fg/5">
-                    {step.step}
+              <ScrollReveal key={step.n} delay={i * 0.06}>
+                <Card hover className="p-7 h-full">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                    {step.n}
                   </span>
-                  <h3 className="font-display text-base font-bold text-neu-fg mb-2">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-neu-muted leading-relaxed">
-                    {step.description}
+                  <p className="text-[15px] text-warm-muted leading-relaxed">
+                    {step.body}
                   </p>
-                </NeuCard>
+                </Card>
               </ScrollReveal>
             ))}
           </div>
@@ -255,20 +315,22 @@ export default function HowItWorksPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20">
+        <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
-            <NeuCard className="p-10 md:p-16 text-center">
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-neu-fg mb-4">
-                See How OmnI Works on Your Line
+            <Card className="p-10 md:p-14 text-center">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-warm-fg mb-3">
+                See how OmnI works on your line
               </h2>
-              <p className="text-base text-neu-muted mb-8 max-w-2xl mx-auto leading-relaxed">
-                A short walk-through: one line, one shift, measurable impact.
+              <p className="text-warm-muted mb-8 max-w-xl mx-auto leading-relaxed">
+                Bring one real line, one real shift, one real challenge. We
+                generate live insights from your reality &mdash; not from
+                slides or simulations.
               </p>
-              <NeuButton href="/contact" size="lg">
+              <Button href="/contact" variant="accent" size="lg">
                 Request a Demo
-              </NeuButton>
-            </NeuCard>
+              </Button>
+            </Card>
           </ScrollReveal>
         </div>
       </section>

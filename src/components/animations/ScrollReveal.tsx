@@ -4,38 +4,21 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-type ScrollRevealProps = {
+type Props = {
   children: ReactNode;
-  direction?: "up" | "left" | "right";
   delay?: number;
   className?: string;
 };
 
-const directionMap = {
-  up: { y: 24, x: 0 },
-  left: { y: 0, x: -40 },
-  right: { y: 0, x: 40 },
-};
-
-export default function ScrollReveal({
-  children,
-  direction = "up",
-  delay = 0,
-  className = "",
-}: ScrollRevealProps) {
-  const { ref, inView } = useInView({
-    threshold: 0.15,
-    triggerOnce: true,
-  });
-
-  const offset = directionMap[direction];
+export default function ScrollReveal({ children, delay = 0, className = "" }: Props) {
+  const { ref, inView } = useInView({ threshold: 0.12, triggerOnce: true });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, x: offset.x, y: offset.y }}
-      animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: "easeOut", delay }}
+      initial={{ opacity: 0, y: 16 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay }}
       className={className}
     >
       {children}

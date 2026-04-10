@@ -7,25 +7,25 @@ export const NAV_LINKS = [
   { label: "About", href: "/about" },
 ] as const;
 
-export const FOOTER_PRODUCT_LINKS = [
+export const FOOTER_PRODUCT = [
   { label: "Home", href: "/" },
   { label: "How OmnI Thinks", href: "/how-omni-thinks" },
   { label: "How it Works", href: "/how-it-works" },
   { label: "Insights", href: "/insights" },
 ] as const;
 
-export const FOOTER_COMPANY_LINKS = [
+export const FOOTER_COMPANY = [
   { label: "About Myrtle Europe", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
-export const SOCIAL_LINKS = {
+export const SOCIAL = {
   linkedin: "https://www.linkedin.com/company/110151100",
 } as const;
 
 export const COMPANY = {
   name: "Myrtle Europe",
-  product: "OmnI NAVIGATION",
+  product: "OmnI Navigation",
   email: "info@myrtle-europe.com",
-  copyright: `Copyright ${new Date().getFullYear()} Myrtle Europe`,
+  copyright: `© ${new Date().getFullYear()} Myrtle Europe`,
 } as const;
