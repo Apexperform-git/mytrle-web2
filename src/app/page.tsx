@@ -237,7 +237,7 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { value: "50%+", label: "Less non-value-added time" },
-                  { value: "40 min", label: "Recovery time saved per incident" },
+                  { value: "Real-time", label: "Live signals, not batch reports" },
                   { value: "24/7", label: "Continuous line visibility" },
                   { value: "1 shift", label: "To see measurable impact" },
                 ].map((stat) => (
