@@ -135,11 +135,9 @@ export default function WhatIsOmniPage() {
               <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-5">
                 What is OmnI
               </span>
-              <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08] mb-7">
-                Not a dashboard.
-                <br />
-                Not automation.
-                <br />
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.12] mb-7">
+                Not a dashboard.<br />
+                Not automation.<br />
                 <span className="text-brand-orange">Navigation.</span>
               </h1>
               <p className="text-lg md:text-xl text-warm-muted leading-relaxed max-w-2xl mx-auto">
