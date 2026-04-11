@@ -21,7 +21,7 @@ export default function MobileMenu({ open, onClose }: Props) {
             onClick={onClose}
             className={`block px-3 py-2.5 rounded text-[15px] font-display font-medium transition-colors duration-200 ${
               pathname === link.href
-                ? "text-warm-accent bg-surface-3"
+                ? "text-brand-plum bg-surface-3"
                 : "text-warm-muted hover:text-warm-hover"
             }`}
           >

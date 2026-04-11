@@ -18,7 +18,7 @@ const CheckIcon = () => (
     strokeWidth={2}
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-warm-accent shrink-0 mt-0.5"
+    className="text-brand-orange shrink-0 mt-0.5"
   >
     <path d="M4.5 12.75l6 6 9-13.5" />
   </svg>
@@ -34,7 +34,7 @@ const XIcon = () => (
     strokeWidth={2}
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-warm-accent"
+    className="text-brand-orange"
   >
     <path d="M6 18L18 6M6 6l12 12" />
   </svg>
@@ -132,12 +132,12 @@ export default function WhatIsOmniPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-5">
                 What is OmnI
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08] mb-7">
                 Operational Intelligence that{" "}
-                <span className="text-warm-accent">Guides, Not Reports</span>
+                <span className="text-brand-orange">Guides, Not Reports</span>
               </h1>
               <p className="text-lg md:text-xl text-warm-muted leading-relaxed max-w-2xl mx-auto mb-7">
                 OmnI NAVIGATION learns how your operation really behaves, reasons
@@ -146,7 +146,7 @@ export default function WhatIsOmniPage() {
               </p>
               <p className="text-[15px] font-display font-medium tracking-tight text-warm-fg">
                 Not a dashboard. Not automation.{" "}
-                <span className="text-warm-accent">Navigation.</span>
+                <span className="text-brand-orange">Navigation.</span>
               </p>
             </div>
           </ScrollReveal>
@@ -160,7 +160,7 @@ export default function WhatIsOmniPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-3">
                 Core Framework
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-[42px] font-semibold tracking-tight leading-[1.15]">
@@ -173,7 +173,7 @@ export default function WhatIsOmniPage() {
             {frameworkSteps.map((step, i) => (
               <ScrollReveal key={step.n} delay={i * 0.12}>
                 <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-brand-orange font-display text-xs font-semibold mb-5">
                     {step.n}
                   </span>
                   <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-2">
@@ -211,7 +211,7 @@ export default function WhatIsOmniPage() {
                 <div className="space-y-3">
                   {painPoints.map((item) => (
                     <div key={item} className="flex items-center gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-warm-accent shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-orange shrink-0" />
                       <span className="text-[15px] text-warm-fg">{item}</span>
                     </div>
                   ))}
@@ -224,7 +224,7 @@ export default function WhatIsOmniPage() {
                 <p className="font-display text-xl md:text-2xl font-semibold tracking-tight text-warm-fg leading-snug">
                   &ldquo;If a system cannot explain itself to operators, it is
                   not intelligence &mdash;{" "}
-                  <span className="text-warm-accent">it is noise.</span>&rdquo;
+                  <span className="text-brand-orange">it is noise.</span>&rdquo;
                 </p>
               </Card>
             </ScrollReveal>
@@ -239,7 +239,7 @@ export default function WhatIsOmniPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-3">
                 Clear Distinction
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-[42px] font-semibold tracking-tight leading-[1.15]">
@@ -284,7 +284,7 @@ export default function WhatIsOmniPage() {
             {targetUsers.map((user, i) => (
               <ScrollReveal key={user.role} delay={i * 0.1}>
                 <Card hover className="p-7 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-brand-orange font-display text-xs font-semibold mb-5">
                     {user.n}
                   </span>
                   <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-1">
@@ -318,7 +318,7 @@ export default function WhatIsOmniPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div className="rounded-lg border border-dark-border p-12 bg-dark-surface text-center">
-                <div className="font-display text-7xl md:text-8xl font-semibold text-warm-accent mb-3 tabular-nums tracking-tight">
+                <div className="font-display text-7xl md:text-8xl font-semibold text-brand-orange mb-3 tabular-nums tracking-tight">
                   <CountUp end={50} suffix="%+" />
                 </div>
                 <p className="text-dark-muted font-display font-medium text-lg">
@@ -340,7 +340,7 @@ export default function WhatIsOmniPage() {
                 <div className="space-y-3">
                   {impactBullets.map((item) => (
                     <div key={item} className="flex items-center gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-warm-accent shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-orange shrink-0" />
                       <span className="text-[15px] text-dark-muted">
                         {item}
                       </span>

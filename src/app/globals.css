@@ -1,35 +1,43 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Light palette */
+  /* ── Brand Colors ── */
+  --color-brand-plum: #5B2A6E;
+  --color-brand-plum-light: #7B3F8E;
+  --color-brand-plum-dark: #3D1A4A;
+  --color-brand-orange: #E67A30;
+  --color-brand-orange-light: #F0944D;
+  --color-brand-orange-dark: #CC6420;
+
+  /* ── Light palette ── */
   --color-warm-bg: #f2f1ed;
   --color-warm-fg: #26251e;
   --color-warm-muted: rgba(38, 37, 30, 0.55);
-  --color-warm-accent: #f54e00;
-  --color-warm-hover: #cf2d56;
+  --color-warm-accent: #E67A30;
+  --color-warm-hover: #5B2A6E; /* = brand-plum */
   --color-warm-border: rgba(38, 37, 30, 0.1);
   --color-warm-border-strong: rgba(38, 37, 30, 0.2);
 
-  /* Dark palette */
-  --color-dark-bg: #14120b;
-  --color-dark-fg: #edecec;
-  --color-dark-muted: rgba(237, 236, 236, 0.55);
-  --color-dark-border: rgba(237, 236, 236, 0.1);
-  --color-dark-surface: #1e1c14;
+  /* ── Dark palette ── */
+  --color-dark-bg: #1C1024;
+  --color-dark-fg: #F0ECF2;
+  --color-dark-muted: rgba(240, 236, 242, 0.55);
+  --color-dark-border: rgba(240, 236, 242, 0.12);
+  --color-dark-surface: #281A32;
 
-  /* Surface scale (light) */
+  /* ── Surface scale (light) ── */
   --color-surface-0: #f7f7f4;
   --color-surface-1: #f2f1ed;
   --color-surface-2: #ebeae5;
   --color-surface-3: #e6e5e0;
   --color-surface-4: #e1e0db;
 
-  /* Fonts */
+  /* ── Fonts ── */
   --font-display: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
   --font-body: Georgia, "Iowan Old Style", "Palatino Linotype", "URW Palladio L", serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
 
-  /* Animations */
+  /* ── Animations ── */
   --animate-fade-in: fadeIn 0.6s ease-out forwards;
   --animate-slide-up: slideUp 0.6s ease-out forwards;
 
@@ -54,23 +62,41 @@ body {
 }
 
 ::selection {
-  background: #f54e00;
+  background: #5B2A6E;
   color: white;
 }
 
-/* Dark section utility */
-.dark-section {
-  background: #14120b;
-  color: #edecec;
+/* ── Brand gradient utility ── */
+.brand-gradient {
+  background: linear-gradient(135deg, #E67A30 0%, #5B2A6E 100%);
 }
 
-.dark-section .text-warm-fg { color: #edecec; }
-.dark-section .text-warm-muted { color: rgba(237, 236, 236, 0.55); }
-.dark-section .border-warm-border { border-color: rgba(237, 236, 236, 0.1); }
-.dark-section .border-warm-border-strong { border-color: rgba(237, 236, 236, 0.2); }
-.dark-section .bg-surface-2 { background: #1e1c14; }
-.dark-section .bg-surface-3 { background: #28261d; }
-.dark-section .bg-surface-4 { background: #332f26; }
+.brand-gradient-text {
+  background: linear-gradient(135deg, #E67A30 0%, #5B2A6E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Dark section ── */
+.dark-section {
+  background: #1C1024;
+  color: #F0ECF2;
+}
+
+.dark-section .text-warm-fg { color: #F0ECF2; }
+.dark-section .text-warm-muted { color: rgba(240, 236, 242, 0.55); }
+.dark-section .border-warm-border { border-color: rgba(240, 236, 242, 0.12); }
+.dark-section .border-warm-border-strong { border-color: rgba(240, 236, 242, 0.2); }
+.dark-section .bg-surface-2 { background: #281A32; }
+.dark-section .bg-surface-3 { background: #33223E; }
+.dark-section .bg-surface-4 { background: #3E2A4A; }
+
+/* ── Plum dark section (alternate) ── */
+.plum-section {
+  background: #5B2A6E;
+  color: white;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

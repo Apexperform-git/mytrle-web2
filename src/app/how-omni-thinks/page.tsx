@@ -140,12 +140,12 @@ export default function HowOmniThinksPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-5">
                 How OmnI Thinks
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
                 Bridge AI, OI, OT and{" "}
-                <span className="text-warm-accent">Human Capital</span>
+                <span className="text-brand-orange">Human Capital</span>
               </h1>
               <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 OmnI is a co-pilot that interacts with your operators, builds
@@ -171,13 +171,13 @@ export default function HowOmniThinksPage() {
             {systems.map((sys, i) => {
               const textBlock = (
                 <div className="flex flex-col justify-center">
-                  <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+                  <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-3">
                     {sys.tag} &mdash; {sys.label}
                   </span>
                   <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-dark-fg mb-2">
                     {sys.title}
                   </h2>
-                  <p className="text-[15px] text-warm-accent font-medium mb-4">
+                  <p className="text-[15px] text-brand-orange font-medium mb-4">
                     {sys.subtitle}
                   </p>
                   <p className="text-[15px] text-dark-muted leading-relaxed">
@@ -188,7 +188,7 @@ export default function HowOmniThinksPage() {
 
               const cardBlock = (
                 <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 flex items-center justify-center min-h-[200px]">
-                  <div className="w-16 h-16 rounded-lg bg-dark-surface border border-dark-border flex items-center justify-center text-warm-accent">
+                  <div className="w-16 h-16 rounded-lg bg-dark-surface border border-dark-border flex items-center justify-center text-brand-orange">
                     {sys.icon}
                   </div>
                 </div>
@@ -229,7 +229,7 @@ export default function HowOmniThinksPage() {
             {loopSteps.map((step, i) => (
               <ScrollReveal key={step.num} delay={i * 0.08}>
                 <div className="rounded-lg border border-warm-border bg-surface-2 p-7 h-full hover:border-warm-border-strong transition-colors duration-200">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-brand-orange font-display text-xs font-semibold mb-5">
                     {step.num}
                   </span>
                   <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-2">
@@ -259,7 +259,7 @@ export default function HowOmniThinksPage() {
               <ScrollReveal key={b.title} delay={i * 0.06}>
                 <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
                   <div className="flex gap-4 items-start">
-                    <span className="mt-0.5 shrink-0 w-6 h-6 rounded-full bg-dark-surface border border-dark-border flex items-center justify-center text-warm-accent">
+                    <span className="mt-0.5 shrink-0 w-6 h-6 rounded-full bg-dark-surface border border-dark-border flex items-center justify-center text-brand-orange">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
                     </span>
                     <div>

@@ -13,13 +13,13 @@ export default function HowItWorksPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-5">
                 How it Works
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
                 Reduce firefighting.
                 <br />
-                <span className="text-warm-accent">
+                <span className="text-brand-orange">
                   Reveal what matters next.
                 </span>
               </h1>
@@ -38,7 +38,7 @@ export default function HowItWorksPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollReveal>
               <div>
-                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-4">
                   Reality
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-dark-fg mb-5">
@@ -74,7 +74,7 @@ export default function HowItWorksPage() {
                     className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200"
                   >
                     <div className="flex items-center gap-4">
-                      <span className="w-8 h-8 rounded bg-dark-surface flex items-center justify-center text-warm-accent font-display text-sm font-semibold shrink-0 border border-dark-border">
+                      <span className="w-8 h-8 rounded bg-dark-surface flex items-center justify-center text-brand-orange font-display text-sm font-semibold shrink-0 border border-dark-border">
                         {item.mark}
                       </span>
                       <span className="text-[15px] text-dark-fg font-medium">
@@ -119,7 +119,7 @@ export default function HowItWorksPage() {
 
             <ScrollReveal delay={0.12} className="order-1 lg:order-2">
               <div>
-                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-4">
                   Foresight
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-5">
@@ -148,7 +148,7 @@ export default function HowItWorksPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-3">
                 Capabilities
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-[42px] font-semibold tracking-tight leading-[1.15]">
@@ -185,7 +185,7 @@ export default function HowItWorksPage() {
             ].map((cap, i) => (
               <ScrollReveal key={cap.n} delay={i * 0.08}>
                 <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-brand-orange font-display text-xs font-semibold mb-5">
                     {cap.n}
                   </span>
                   <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-2">
@@ -241,7 +241,7 @@ export default function HowItWorksPage() {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="text-warm-accent"
+                        className="text-brand-orange"
                       >
                         <path d="M4.5 12.75l6 6 9-13.5" />
                       </svg>
@@ -267,7 +267,7 @@ export default function HowItWorksPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-3">
                 Methodology
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-[42px] font-semibold tracking-tight leading-[1.15]">
@@ -314,7 +314,7 @@ export default function HowItWorksPage() {
             ].map((step, i) => (
               <ScrollReveal key={step.n} delay={i * 0.06}>
                 <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-brand-orange font-display text-xs font-semibold mb-5">
                     {step.n}
                   </span>
                   <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-2">

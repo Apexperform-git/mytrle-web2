@@ -13,12 +13,12 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-5">
                 About Us
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
                 About{" "}
-                <span className="text-warm-accent">Myrtle Europe</span>
+                <span className="text-brand-orange">Myrtle Europe</span>
               </h1>
               <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 We help manufacturing teams see what is really happening on
@@ -75,7 +75,7 @@ export default function AboutPage() {
               <ScrollReveal key={item.title} delay={i * 0.08}>
                 <div className="rounded-lg border border-warm-border bg-surface-2 p-7 h-full hover:border-warm-border-strong transition-colors duration-200">
                   <div className="flex items-start gap-4">
-                    <span className="w-8 h-8 rounded bg-surface-3 flex items-center justify-center shrink-0 mt-0.5 text-warm-accent">
+                    <span className="w-8 h-8 rounded bg-surface-3 flex items-center justify-center shrink-0 mt-0.5 text-brand-orange">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
                     </span>
                     <div>
@@ -138,7 +138,7 @@ export default function AboutPage() {
               <ScrollReveal key={step.n} delay={i * 0.06}>
                 <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200">
                   <div className="flex items-start gap-5">
-                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-dark-surface border border-dark-border text-warm-accent font-display text-sm font-semibold shrink-0">
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-dark-surface border border-dark-border text-brand-orange font-display text-sm font-semibold shrink-0">
                       {step.n}
                     </span>
                     <div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
             ].map((item, i) => (
               <ScrollReveal key={item.n} delay={i * 0.08}>
                 <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-dark-surface border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-dark-surface border border-dark-border text-brand-orange font-display text-xs font-semibold mb-5">
                     {item.n}
                   </span>
                   <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-2">
@@ -245,7 +245,7 @@ export default function AboutPage() {
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
                 <div className="rounded-lg border border-warm-border bg-surface-2 p-7 h-full hover:border-warm-border-strong transition-colors duration-200">
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-warm-accent mb-2">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-brand-orange mb-2">
                     {item.title}
                   </h3>
                   <p className="text-[15px] text-warm-muted leading-relaxed">

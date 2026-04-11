@@ -16,7 +16,7 @@ export default function SectionHeading({
   return (
     <div className={`${align === "center" ? "text-center" : "text-left"} mb-14 ${className}`}>
       {tag && (
-        <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+        <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-3">
           {tag}
         </span>
       )}

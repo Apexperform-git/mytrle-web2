@@ -22,12 +22,12 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-5">
                 Contact
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
                 Get in{" "}
-                <span className="text-warm-accent">touch</span>
+                <span className="text-brand-orange">touch</span>
               </h1>
               <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 We work with real lines, real shifts, and real challenges. Tell
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   {submitted ? (
                     <div className="flex flex-col items-center justify-center py-16 text-center">
                       <div className="w-16 h-16 rounded-lg bg-surface-3 flex items-center justify-center mb-6">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-warm-accent"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-brand-orange"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
                       </div>
                       <h3 className="font-display text-2xl font-semibold tracking-tight text-warm-fg mb-2">
                         Message Sent
@@ -116,7 +116,7 @@ export default function ContactPage() {
                       href={`mailto:${COMPANY.email}`}
                       className="flex items-center gap-3 group"
                     >
-                      <span className="w-9 h-9 rounded-lg bg-surface-4 flex items-center justify-center shrink-0 text-warm-accent font-display text-sm font-semibold">
+                      <span className="w-9 h-9 rounded-lg bg-surface-4 flex items-center justify-center shrink-0 text-brand-orange font-display text-sm font-semibold">
                         @
                       </span>
                       <span className="text-[15px] text-warm-fg group-hover:text-warm-hover transition-colors duration-200">
@@ -137,7 +137,7 @@ export default function ContactPage() {
                           height="16"
                           viewBox="0 0 24 24"
                           fill="currentColor"
-                          className="text-warm-accent"
+                          className="text-brand-orange"
                         >
                           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
