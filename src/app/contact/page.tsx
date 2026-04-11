@@ -17,11 +17,11 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="py-28 md:py-40">
+      {/* -------- 1. Hero (light, centered) -------- */}
+      <section className="bg-warm-bg py-28 md:py-40">
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto text-center">
               <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
                 Contact
               </span>
@@ -29,7 +29,7 @@ export default function ContactPage() {
                 Get in{" "}
                 <span className="text-warm-accent">touch</span>
               </h1>
-              <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl">
+              <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 We work with real lines, real shifts, and real challenges. Tell
                 us about yours and we will show you what OmnI can do.
               </p>
@@ -38,8 +38,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Form + Info */}
-      <section className="py-20">
+      {/* -------- 2. Form + Info (light) -------- */}
+      <section className="bg-warm-bg py-20">
         <div className="max-w-6xl mx-auto px-5">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Form — takes 2 cols */}
@@ -49,20 +49,7 @@ export default function ContactPage() {
                   {submitted ? (
                     <div className="flex flex-col items-center justify-center py-16 text-center">
                       <div className="w-16 h-16 rounded-lg bg-surface-3 flex items-center justify-center mb-6">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={2}
-                          stroke="currentColor"
-                          className="w-8 h-8 text-warm-accent"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M4.5 12.75l6 6 9-13.5"
-                          />
-                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-warm-accent"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
                       </div>
                       <h3 className="font-display text-2xl font-semibold tracking-tight text-warm-fg mb-2">
                         Message Sent
@@ -204,6 +191,27 @@ export default function ContactPage() {
               </ScrollReveal>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* -------- 3. CTA (dark) -------- */}
+      <section className="dark-section py-24 md:py-32">
+        <div className="max-w-3xl mx-auto px-5">
+          <ScrollReveal>
+            <div className="text-center">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-dark-fg mb-3">
+                One real line. One real shift. One real problem.
+              </h2>
+              <p className="text-dark-muted mb-8 max-w-xl mx-auto leading-relaxed">
+                That is all it takes to see the difference. No slides, no
+                generic demos &mdash; just your operation, seen clearly for the
+                first time.
+              </p>
+              <Button href="/contact" variant="accent" size="lg">
+                Request a Demo
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>

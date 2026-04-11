@@ -1,18 +1,18 @@
 "use client";
 
-import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/animations/ScrollReveal";
+import CountUp from "@/components/animations/CountUp";
 
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-28 md:py-40">
+      {/* -------- 1. Hero (light, centered) -------- */}
+      <section className="bg-warm-bg py-28 md:py-40">
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto text-center">
               <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
                 About Us
               </span>
@@ -20,7 +20,7 @@ export default function AboutPage() {
                 About{" "}
                 <span className="text-warm-accent">Myrtle Europe</span>
               </h1>
-              <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl">
+              <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 We help manufacturing teams see what is really happening on
                 their lines &mdash; and act on it before losses compound.
               </p>
@@ -29,24 +29,24 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-20">
+      {/* -------- 2. Overview Quote (dark) -------- */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
-            <Card className="p-8 md:p-12 text-center">
-              <p className="text-lg md:text-xl leading-relaxed text-warm-fg">
+            <div className="rounded-lg border border-dark-border p-8 md:p-12 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 text-center">
+              <p className="text-lg md:text-xl leading-relaxed text-dark-fg">
                 &ldquo;We built OmnI NAVIGATION because we believe operators
                 deserve better than dashboards that explain yesterday. They
                 deserve a system that helps them navigate today &mdash; with
                 clarity, context, and confidence.&rdquo;
               </p>
-            </Card>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Method */}
-      <section className="py-20">
+      {/* -------- 3. Method (light) -------- */}
+      <section className="bg-warm-bg py-20">
         <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="Our Method"
@@ -73,43 +73,29 @@ export default function AboutPage() {
               },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <Card hover className="p-7 h-full">
+                <div className="rounded-lg border border-warm-border bg-surface-2 p-7 h-full hover:border-warm-border-strong transition-colors duration-200">
                   <div className="flex items-start gap-4">
-                    <span className="w-8 h-8 rounded bg-surface-3 flex items-center justify-center shrink-0 mt-0.5">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        className="text-warm-accent"
-                      >
-                        <path
-                          d="M13.5 4.5L6.5 11.5L2.5 7.5"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                    <span className="w-8 h-8 rounded bg-surface-3 flex items-center justify-center shrink-0 mt-0.5 text-warm-accent">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
                     </span>
                     <div>
                       <h3 className="font-display text-[15px] font-semibold tracking-tight text-warm-fg mb-1.5">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-warm-muted leading-relaxed">
+                      <p className="text-[15px] text-warm-muted leading-relaxed">
                         {item.body}
                       </p>
                     </div>
                   </div>
-                </Card>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-20">
+      {/* -------- 4. Process (dark) -------- */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="Process"
@@ -150,44 +136,44 @@ export default function AboutPage() {
               },
             ].map((step, i) => (
               <ScrollReveal key={step.n} delay={i * 0.06}>
-                <Card hover className="p-6">
+                <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200">
                   <div className="flex items-start gap-5">
-                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-surface-4 text-warm-accent font-display text-sm font-semibold shrink-0">
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-dark-surface border border-dark-border text-warm-accent font-display text-sm font-semibold shrink-0">
                       {step.n}
                     </span>
                     <div>
-                      <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-1">
+                      <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-1">
                         {step.title}
                       </h3>
-                      <p className="text-[15px] text-warm-muted leading-relaxed">
+                      <p className="text-[15px] text-dark-muted leading-relaxed">
                         {step.body}
                       </p>
                     </div>
                   </div>
-                </Card>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Outcome */}
-      <section className="py-20">
+      {/* -------- 5. Outcome Quote (light) -------- */}
+      <section className="bg-warm-bg py-20">
         <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
-            <Card variant="inset" className="p-8 md:p-12 text-center">
+            <div className="rounded-lg border border-warm-border bg-surface-3 p-8 md:p-12 text-center">
               <p className="text-lg md:text-xl leading-relaxed text-warm-fg">
                 &ldquo;The outcome is not a report. It is a clear, actionable
                 overview of how your operation truly behaves &mdash; and what to
                 do next to make it better.&rdquo;
               </p>
-            </Card>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Technology */}
-      <section className="py-20">
+      {/* -------- 6. Technology (dark) -------- */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="Technology"
@@ -213,25 +199,25 @@ export default function AboutPage() {
               },
             ].map((item, i) => (
               <ScrollReveal key={item.n} delay={i * 0.08}>
-                <Card hover className="p-7 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-dark-surface border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
                     {item.n}
                   </span>
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-2">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-[15px] text-warm-muted leading-relaxed">
+                  <p className="text-[15px] text-dark-muted leading-relaxed">
                     {item.body}
                   </p>
-                </Card>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Metrics */}
-      <section className="py-20">
+      {/* -------- 7. Metrics (light) -------- */}
+      <section className="bg-warm-bg py-20">
         <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="Metrics"
@@ -258,29 +244,29 @@ export default function AboutPage() {
               },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <Card hover className="p-7 h-full">
+                <div className="rounded-lg border border-warm-border bg-surface-2 p-7 h-full hover:border-warm-border-strong transition-colors duration-200">
                   <h3 className="font-display text-lg font-semibold tracking-tight text-warm-accent mb-2">
                     {item.title}
                   </h3>
                   <p className="text-[15px] text-warm-muted leading-relaxed">
                     {item.body}
                   </p>
-                </Card>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20">
+      {/* -------- 8. CTA (dark) -------- */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
-            <Card className="p-10 md:p-14 text-center">
-              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-warm-fg mb-3">
+            <div className="text-center">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-dark-fg mb-3">
                 Let&rsquo;s talk about your line
               </h2>
-              <p className="text-warm-muted mb-8 max-w-xl mx-auto leading-relaxed">
+              <p className="text-dark-muted mb-8 max-w-xl mx-auto leading-relaxed">
                 Every operation is different. Tell us about yours and we will
                 show you what OmnI can reveal &mdash; with your real data, on
                 your real floor.
@@ -288,7 +274,7 @@ export default function AboutPage() {
               <Button href="/contact" variant="accent" size="lg">
                 Get in Touch
               </Button>
-            </Card>
+            </div>
           </ScrollReveal>
         </div>
       </section>

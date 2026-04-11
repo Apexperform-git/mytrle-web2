@@ -8,8 +8,8 @@ import ScrollReveal from "@/components/animations/ScrollReveal";
 export default function InsightsPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-28 md:py-40">
+      {/* -------- 1. Hero (light, centered) -------- */}
+      <section className="bg-warm-bg py-28 md:py-40">
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
@@ -29,29 +29,29 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="py-20">
+      {/* -------- 2. Philosophy Quote (dark) -------- */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
-            <Card variant="inset" className="p-8 md:p-12 text-center">
-              <p className="text-lg md:text-xl leading-relaxed text-warm-fg mb-4">
+            <div className="rounded-lg border border-dark-border p-8 md:p-12 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 text-center">
+              <p className="text-lg md:text-xl leading-relaxed text-dark-fg mb-4">
                 &ldquo;Operations are not only a set of KPIs. They are a{" "}
                 <strong>
                   living system of flow, signals, and human decisions.
                 </strong>
                 &rdquo;
               </p>
-              <p className="text-[15px] text-warm-muted leading-relaxed">
+              <p className="text-[15px] text-dark-muted leading-relaxed">
                 OmnI helps you navigate in the present &mdash; not explain the
                 past.
               </p>
-            </Card>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* 01 — Reality "As Is" */}
-      <section className="py-20">
+      {/* -------- 3. 01 — Reality "As Is" (light) -------- */}
+      <section className="bg-warm-bg py-20">
         <div className="max-w-6xl mx-auto px-5">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollReveal>
@@ -104,8 +104,8 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* 02 — Observing Flow */}
-      <section className="py-20">
+      {/* -------- 4. 02 — Observing Flow (dark) -------- */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="02 — Observing Flow"
@@ -116,8 +116,8 @@ export default function InsightsPage() {
           {/* Comparison cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-10">
             <ScrollReveal>
-              <Card variant="inset" className="p-7 h-full">
-                <h3 className="font-display text-lg font-semibold tracking-tight text-warm-muted mb-3">
+              <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-dark-muted mb-3">
                   Traditional: Results
                 </h3>
                 <ul className="space-y-2.5">
@@ -129,17 +129,17 @@ export default function InsightsPage() {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2.5 text-[15px] text-warm-muted leading-snug"
+                      className="flex items-start gap-2.5 text-[15px] text-dark-muted leading-snug"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-warm-muted mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-dark-muted mt-2 shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
-              </Card>
+              </div>
             </ScrollReveal>
             <ScrollReveal delay={0.08}>
-              <Card className="p-7 h-full">
+              <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
                 <h3 className="font-display text-lg font-semibold tracking-tight text-warm-accent mb-3">
                   OmnI: Flow
                 </h3>
@@ -152,21 +152,21 @@ export default function InsightsPage() {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2.5 text-[15px] text-warm-fg leading-snug"
+                      className="flex items-start gap-2.5 text-[15px] text-dark-fg leading-snug"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-warm-accent mt-2 shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
-              </Card>
+              </div>
             </ScrollReveal>
           </div>
 
           {/* How OmnI observes flow */}
           <ScrollReveal delay={0.12}>
-            <Card className="p-7 md:p-10">
-              <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-6">
+            <div className="rounded-lg border border-dark-border p-7 md:p-10 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200">
+              <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-6">
                 How OmnI observes flow
               </h3>
               <div className="space-y-3">
@@ -194,29 +194,29 @@ export default function InsightsPage() {
                 ].map((item) => (
                   <div
                     key={item.n}
-                    className="flex items-start gap-4 bg-surface-3 border border-warm-border rounded-lg p-4"
+                    className="flex items-start gap-4 border border-dark-border rounded-lg p-4"
                   >
-                    <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-4 text-warm-accent font-display text-xs font-semibold shrink-0">
+                    <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-dark-surface border border-dark-border text-warm-accent font-display text-xs font-semibold shrink-0">
                       {item.n}
                     </span>
                     <div>
-                      <h4 className="font-display text-[15px] font-semibold tracking-tight text-warm-fg mb-0.5">
+                      <h4 className="font-display text-[15px] font-semibold tracking-tight text-dark-fg mb-0.5">
                         {item.title}
                       </h4>
-                      <p className="text-sm text-warm-muted leading-relaxed">
+                      <p className="text-sm text-dark-muted leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
                   </div>
                 ))}
               </div>
-            </Card>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* 03 — Unified Signals */}
-      <section className="py-20">
+      {/* -------- 5. 03 — Unified Signals (light) -------- */}
+      <section className="bg-warm-bg py-20">
         <div className="max-w-6xl mx-auto px-5">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollReveal>
@@ -283,8 +283,8 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* Floor Benefits */}
-      <section className="py-20">
+      {/* -------- 6. Floor Benefits (light) -------- */}
+      <section className="bg-warm-bg py-20">
         <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="On the Floor"
@@ -312,8 +312,8 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* 04 — Shift Handover */}
-      <section className="py-20">
+      {/* -------- 7. 04 — Shift Handover (dark) -------- */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="04 — Shift Handover"
@@ -321,8 +321,8 @@ export default function InsightsPage() {
           />
           <div className="grid md:grid-cols-2 gap-6">
             <ScrollReveal>
-              <Card variant="inset" className="p-7 h-full">
-                <h3 className="font-display text-lg font-semibold tracking-tight text-warm-muted mb-4">
+              <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-dark-muted mb-4">
                   Before
                 </h3>
                 <ul className="space-y-3">
@@ -334,18 +334,18 @@ export default function InsightsPage() {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2.5 text-[15px] text-warm-muted leading-snug"
+                      className="flex items-start gap-2.5 text-[15px] text-dark-muted leading-snug"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-warm-muted mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-dark-muted mt-2 shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
-              </Card>
+              </div>
             </ScrollReveal>
             <ScrollReveal delay={0.08}>
-              <Card className="p-7 h-full">
-                <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-4">
+              <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-4">
                   After
                 </h3>
                 <ul className="space-y-3">
@@ -357,34 +357,21 @@ export default function InsightsPage() {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2.5 text-[15px] text-warm-fg leading-snug"
+                      className="flex items-start gap-2.5 text-[15px] text-dark-fg leading-snug"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={2}
-                        stroke="currentColor"
-                        className="w-4 h-4 text-warm-accent shrink-0 mt-0.5"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M4.5 12.75l6 6 9-13.5"
-                        />
-                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-warm-accent shrink-0 mt-0.5"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
                       {item}
                     </li>
                   ))}
                 </ul>
-              </Card>
+              </div>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* 05 — Quiet Shifts */}
-      <section className="py-20">
+      {/* -------- 8. Quiet Shifts (light) -------- */}
+      <section className="bg-warm-bg py-20">
         <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
             <Card className="p-8 md:p-12 text-center">
@@ -406,8 +393,8 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* Business Value */}
-      <section className="py-20">
+      {/* -------- 9. Business Value (dark) -------- */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="Business Value"
@@ -438,25 +425,25 @@ export default function InsightsPage() {
               },
             ].map((item, i) => (
               <ScrollReveal key={item.n} delay={i * 0.06}>
-                <Card hover className="p-6 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-dark-surface border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
                     {item.n}
                   </span>
-                  <h3 className="font-display text-[15px] font-semibold tracking-tight text-warm-fg mb-1.5">
+                  <h3 className="font-display text-[15px] font-semibold tracking-tight text-dark-fg mb-1.5">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-warm-muted leading-relaxed">
+                  <p className="text-sm text-dark-muted leading-relaxed">
                     {item.body}
                   </p>
-                </Card>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20">
+      {/* -------- 10. CTA (light) -------- */}
+      <section className="bg-warm-bg py-20">
         <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
             <Card className="p-10 md:p-14 text-center">
