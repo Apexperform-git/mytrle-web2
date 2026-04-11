@@ -13,11 +13,11 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Myrtle Europe — OmnI Navigation",
-    template: "%s — Myrtle Europe",
+    default: "OmnI by Myrtle Europe — Operational Intelligence for Manufacturing",
+    template: "%s — OmnI by Myrtle Europe",
   },
   description:
-    "Human-centric operational intelligence that learns how your line behaves, reasons forward, and guides decisions — so operators act with confidence, not guesswork.",
+    "OmnI Navigation watches your production line in real time, reasons about what will happen next, and guides operators with clear, explainable actions — before problems become losses.",
 };
 
 export default function RootLayout({
@@ -26,6 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-warm-bg text-warm-fg font-body">
+        {/* Brand gradient accent bar */}
+        <div className="h-1 brand-gradient w-full shrink-0" />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
