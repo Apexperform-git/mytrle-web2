@@ -8,11 +8,11 @@ import ScrollReveal from "@/components/animations/ScrollReveal";
 export default function HowItWorksPage() {
   return (
     <>
-      {/* Hero */}
+      {/* ━━━ LIGHT: HERO ━━━ */}
       <section className="py-28 md:py-40">
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
-            <div className="max-w-3xl">
+            <div className="text-center max-w-3xl mx-auto">
               <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
                 How it Works
               </span>
@@ -23,7 +23,7 @@ export default function HowItWorksPage() {
                   Reveal what matters next.
                 </span>
               </h1>
-              <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl">
+              <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 Bridge AI, Operational Intelligence, OT and Human Capital
                 &mdash; and cut Non-Value-Added time by 50% or more.
               </p>
@@ -32,8 +32,8 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Reality */}
-      <section className="py-20">
+      {/* ━━━ DARK: REALITY ━━━ */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollReveal>
@@ -41,17 +41,17 @@ export default function HowItWorksPage() {
                 <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
                   Reality
                 </span>
-                <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-5">
+                <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-dark-fg mb-5">
                   OmnI looks at what is really happening
                 </h2>
-                <p className="text-[15px] text-warm-muted leading-relaxed mb-4">
+                <p className="text-[15px] text-dark-muted leading-relaxed mb-4">
                   Rather than relying on batch reports or end-of-shift
                   summaries, OmnI watches your process flow minute by minute.
                   It captures the full picture &mdash; from machine signals
                   and operator actions to environmental context &mdash; and
                   builds a living model of how your line actually behaves.
                 </p>
-                <p className="text-[15px] text-warm-muted leading-relaxed">
+                <p className="text-[15px] text-dark-muted leading-relaxed">
                   Over time it learns what normal looks like for each product,
                   each shift, each configuration. It recognises deviations
                   before they cascade and connects upstream causes to
@@ -62,35 +62,35 @@ export default function HowItWorksPage() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.12}>
-              <Card className="p-6">
-                <div className="space-y-3">
-                  {[
-                    { mark: "+", label: "What works" },
-                    { mark: "!", label: "What causes loss" },
-                    { mark: "~", label: "What helps recovery" },
-                    { mark: "-", label: "What makes things worse" },
-                  ].map((item) => (
-                    <div
-                      key={item.mark}
-                      className="bg-surface-3 border border-warm-border rounded-lg p-3.5 flex items-center gap-4"
-                    >
-                      <span className="w-8 h-8 rounded bg-surface-4 flex items-center justify-center text-warm-accent font-display text-sm font-semibold shrink-0">
+              <div className="space-y-3">
+                {[
+                  { mark: "+", label: "What works" },
+                  { mark: "!", label: "What causes loss" },
+                  { mark: "~", label: "What helps recovery" },
+                  { mark: "-", label: "What makes things worse" },
+                ].map((item) => (
+                  <div
+                    key={item.mark}
+                    className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200"
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="w-8 h-8 rounded bg-dark-surface flex items-center justify-center text-warm-accent font-display text-sm font-semibold shrink-0 border border-dark-border">
                         {item.mark}
                       </span>
-                      <span className="text-[15px] text-warm-fg font-medium">
+                      <span className="text-[15px] text-dark-fg font-medium">
                         {item.label}
                       </span>
                     </div>
-                  ))}
-                </div>
-              </Card>
+                  </div>
+                ))}
+              </div>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Foresight */}
-      <section className="py-20">
+      {/* ━━━ LIGHT: FORESIGHT ━━━ */}
+      <section className="py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollReveal className="order-2 lg:order-1">
@@ -143,14 +143,23 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Capabilities */}
-      <section className="py-20">
+      {/* ━━━ DARK: CAPABILITIES ━━━ */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
-          <SectionHeading
-            tag="Capabilities"
-            title="Stop reacting. Start guiding."
-            subtitle="Four capabilities that turn operational data into operator advantage."
-          />
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+                Capabilities
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-[42px] font-semibold tracking-tight leading-[1.15]">
+                Stop reacting. Start guiding.
+              </h2>
+              <p className="mt-4 text-base md:text-lg text-dark-muted max-w-3xl mx-auto leading-relaxed">
+                Four capabilities that turn operational data into operator advantage.
+              </p>
+            </div>
+          </ScrollReveal>
+
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
@@ -175,25 +184,25 @@ export default function HowItWorksPage() {
               },
             ].map((cap, i) => (
               <ScrollReveal key={cap.n} delay={i * 0.08}>
-                <Card hover className="p-7 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
                     {cap.n}
                   </span>
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-2">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-2">
                     {cap.title}
                   </h3>
-                  <p className="text-[15px] text-warm-muted leading-relaxed">
+                  <p className="text-[15px] text-dark-muted leading-relaxed">
                     {cap.body}
                   </p>
-                </Card>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Decision Maker Benefits */}
-      <section className="py-20">
+      {/* ━━━ LIGHT: DECISION MAKER BENEFITS ━━━ */}
+      <section className="py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
           <SectionHeading
             tag="For Decision Makers"
@@ -226,17 +235,15 @@ export default function HowItWorksPage() {
                       <svg
                         width="16"
                         height="16"
-                        viewBox="0 0 16 16"
+                        viewBox="0 0 24 24"
                         fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="text-warm-accent"
                       >
-                        <path
-                          d="M13.5 4.5L6.5 11.5L2.5 7.5"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
+                        <path d="M4.5 12.75l6 6 9-13.5" />
                       </svg>
                     </span>
                     <div>
@@ -255,14 +262,23 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Methodology */}
-      <section className="py-20">
+      {/* ━━━ DARK: METHODOLOGY ━━━ */}
+      <section className="dark-section py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-5">
-          <SectionHeading
-            tag="Methodology"
-            title="Brown Paper Method & Value Stream Mapping"
-            subtitle="A proven, structured approach to understanding your operation before optimising it."
-          />
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+                Methodology
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-[42px] font-semibold tracking-tight leading-[1.15]">
+                Brown Paper Method &amp; Value Stream Mapping
+              </h2>
+              <p className="mt-4 text-base md:text-lg text-dark-muted max-w-3xl mx-auto leading-relaxed">
+                A proven, structured approach to understanding your operation before optimising it.
+              </p>
+            </div>
+          </ScrollReveal>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -297,25 +313,25 @@ export default function HowItWorksPage() {
               },
             ].map((step, i) => (
               <ScrollReveal key={step.n} delay={i * 0.06}>
-                <Card hover className="p-7 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-3 text-warm-accent font-display text-xs font-semibold mb-5">
+                <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
                     {step.n}
                   </span>
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-warm-fg mb-2">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-dark-fg mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-[15px] text-warm-muted leading-relaxed">
+                  <p className="text-[15px] text-dark-muted leading-relaxed">
                     {step.body}
                   </p>
-                </Card>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20">
+      {/* ━━━ LIGHT: CTA ━━━ */}
+      <section className="py-24 md:py-32">
         <div className="max-w-3xl mx-auto px-5">
           <ScrollReveal>
             <Card className="p-10 md:p-14 text-center">
