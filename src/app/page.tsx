@@ -51,21 +51,6 @@ function ProductMockup() {
   );
 }
 
-/* ── Stats bar ────────────────────────────────────────────────────── */
-
-function StatBar({ label, value, w }: { label: string; value: string; w: string }) {
-  return (
-    <div>
-      <div className="flex justify-between text-sm mb-1.5">
-        <span className="text-dark-muted">{label}</span>
-        <span className="font-display font-semibold text-dark-fg">{value}</span>
-      </div>
-      <div className="h-1.5 rounded-full bg-dark-surface overflow-hidden">
-        <div className="h-full rounded-full brand-gradient transition-all duration-1000" style={{ width: w }} />
-      </div>
-    </div>
-  );
-}
 
 /* ── Page ──────────────────────────────────────────────────────────── */
 
@@ -249,11 +234,20 @@ export default function HomePage() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.15}>
-              <div className="space-y-6">
-                <StatBar label="Less firefighting" value="Significant" w="85%" />
-                <StatBar label="Faster recovery" value="Minutes, not hours" w="72%" />
-                <StatBar label="Better OEE behavior" value="Measurable" w="90%" />
-                <StatBar label="Non-Value-Added reduction" value="50%+" w="50%" />
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { value: "50%+", label: "Less non-value-added time" },
+                  { value: "40 min", label: "Recovery time saved per incident" },
+                  { value: "24/7", label: "Continuous line visibility" },
+                  { value: "1 shift", label: "To see measurable impact" },
+                ].map((stat) => (
+                  <div key={stat.label} className="rounded-lg border border-dark-border bg-dark-surface p-5">
+                    <div className="font-display text-2xl md:text-3xl font-semibold text-brand-orange mb-1 tracking-tight">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-dark-muted">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </ScrollReveal>
           </div>
