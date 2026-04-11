@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FOOTER_PRODUCT, FOOTER_COMPANY, SOCIAL, COMPANY } from "@/lib/constants";
 
@@ -8,13 +9,16 @@ export default function Footer() {
         <div className="bg-surface-3 border border-warm-border rounded-lg p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
-              <div className="mb-4">
-                <span className="font-display font-semibold text-warm-fg text-[15px] tracking-tight">
-                  Myrtle Europe
-                </span>
-                <span className="block text-[11px] text-warm-muted tracking-[0.1em] uppercase font-display mt-0.5">
-                  OmnI Navigation
-                </span>
+              <div className="flex items-center gap-2.5 mb-4">
+                <Image src="/logo.png" alt="OmnI logo" width={28} height={28} />
+                <div className="flex flex-col leading-none">
+                  <span className="font-display font-semibold text-warm-fg text-[15px] tracking-tight">
+                    omni
+                  </span>
+                  <span className="text-[9px] text-warm-muted tracking-[0.12em] uppercase font-display">
+                    by Myrtle Europe
+                  </span>
+                </div>
               </div>
               <p className="text-sm text-warm-muted leading-relaxed">
                 Human-centric operational intelligence that guides decisions

@@ -9,7 +9,7 @@ import CountUp from "@/components/animations/CountUp";
 /* ── Inline SVG icons ─────────────────────────────────────────────── */
 
 const Check = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-warm-accent"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-orange"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
 );
 
 /* ── Fake product UI ─────────────────────────────────────────────── */
@@ -27,15 +27,15 @@ function ProductMockup() {
       {/* Content */}
       <div className="p-5 md:p-6 space-y-4 font-mono text-[12px] leading-relaxed">
         <div className="flex items-start gap-3">
-          <span className="text-warm-accent shrink-0">omni</span>
+          <span className="text-brand-plum shrink-0">omni</span>
           <span className="text-warm-fg">Micro-stop pattern detected on Line 3, Station 7. Frequency has increased 40% over the last 45 minutes.</span>
         </div>
         <div className="flex items-start gap-3">
-          <span className="text-warm-accent shrink-0">omni</span>
+          <span className="text-brand-plum shrink-0">omni</span>
           <span className="text-warm-fg">If the current trend continues, a full stoppage is likely within 35 minutes. Confidence: 82%</span>
         </div>
         <div className="flex items-start gap-3">
-          <span className="text-warm-accent shrink-0">omni</span>
+          <span className="text-brand-plum shrink-0">omni</span>
           <span className="text-warm-muted">Recommendation: brief cleaning intervention at Station 7 now (est. 4 min) could prevent a 40-minute recovery later.</span>
         </div>
         <div className="pt-2 border-t border-warm-border flex items-start gap-3">
@@ -43,7 +43,7 @@ function ProductMockup() {
           <span className="text-warm-fg">Acknowledged. Starting cleaning now.</span>
         </div>
         <div className="flex items-start gap-3">
-          <span className="text-warm-accent shrink-0">omni</span>
+          <span className="text-brand-plum shrink-0">omni</span>
           <span className="text-warm-fg">Confirmed. Monitoring Station 7. Recovery time estimate: 3–5 minutes. Next advisory in 10 minutes.</span>
         </div>
       </div>
@@ -61,7 +61,7 @@ function StatBar({ label, value, w }: { label: string; value: string; w: string 
         <span className="font-display font-semibold text-dark-fg">{value}</span>
       </div>
       <div className="h-1.5 rounded-full bg-dark-surface overflow-hidden">
-        <div className="h-full rounded-full bg-warm-accent transition-all duration-1000" style={{ width: w }} />
+        <div className="h-full rounded-full brand-gradient transition-all duration-1000" style={{ width: w }} />
       </div>
     </div>
   );
@@ -77,17 +77,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto mb-16">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-5">
                 OmnI Navigation
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08] mb-6">
-                Move operators from guessing to{" "}
-                <span className="text-warm-accent">guided</span>
+                The best shift is the one where nothing went{" "}
+                <span className="brand-gradient-text">wrong</span>
               </h1>
               <p className="text-lg md:text-xl text-warm-muted leading-relaxed max-w-2xl mx-auto mb-10">
-                OmnI watches your line in real time, reasons about what may
-                happen next, and gives clear, explainable guidance — without
-                ever taking control away from the operator.
+                OmnI watches your line in real time, reasons about what will
+                happen next, and guides your operators — before problems
+                become losses.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <Button href="/what-is-omni" variant="accent" size="lg">
@@ -112,7 +112,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-3">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-orange mb-3">
                 How OmnI Works
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.12]">
@@ -141,7 +141,7 @@ export default function HomePage() {
             ].map((p, i) => (
               <ScrollReveal key={p.n} delay={i * 0.1}>
                 <div className="rounded-lg border border-dark-border p-7 h-full bg-dark-surface hover:border-warm-border-strong transition-colors duration-200">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-dark-border text-brand-orange font-display text-xs font-semibold mb-5">
                     {p.n}
                   </span>
                   <h3 className="font-display text-lg font-semibold tracking-tight mb-2">{p.title}</h3>
@@ -161,7 +161,7 @@ export default function HomePage() {
               &ldquo;A human-centric operational intelligence that learns how your
               line behaves, reasons forward, and guides decisions — so operators
               act with{" "}
-              <span className="text-warm-accent">confidence, not guesswork</span>.&rdquo;
+              <span className="brand-gradient-text">confidence, not guesswork</span>.&rdquo;
             </p>
           </ScrollReveal>
         </div>
@@ -173,7 +173,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <ScrollReveal>
               <div>
-                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-4">
                   Behavior Change Model
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-5 leading-[1.15]">
@@ -205,7 +205,7 @@ export default function HomePage() {
                     { label: "NNVA", desc: "Necessary NVA", val: "Cleaning, maintenance, changeover" },
                   ].map((row) => (
                     <div key={row.label} className="flex items-start gap-3 p-3 rounded bg-surface-4 border border-warm-border">
-                      <span className="font-display text-xs font-semibold text-warm-accent w-10 shrink-0">{row.label}</span>
+                      <span className="font-display text-xs font-semibold text-brand-orange w-10 shrink-0">{row.label}</span>
                       <div>
                         <span className="text-warm-fg block">{row.desc}</span>
                         <span className="text-warm-muted">{row.val}</span>
@@ -225,11 +225,11 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
-                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-orange mb-4">
                   Measurable Impact
                 </span>
                 <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.08] mb-5">
-                  <span className="text-warm-accent tabular-nums">
+                  <span className="text-brand-orange tabular-nums">
                     <CountUp end={50} suffix="%+" />
                   </span>{" "}
                   reduction in non-value-added time
@@ -241,7 +241,7 @@ export default function HomePage() {
                   <Button href="/how-it-works" variant="accent" size="md">
                     See How it Works
                   </Button>
-                  <Button href="/contact" variant="ghost" size="md" className="text-dark-fg hover:text-warm-accent">
+                  <Button href="/contact" variant="ghost" size="md" className="text-dark-fg hover:text-brand-orange">
                     Request a Demo
                   </Button>
                 </div>

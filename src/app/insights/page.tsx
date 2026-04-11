@@ -13,17 +13,17 @@ export default function InsightsPage() {
         <div className="max-w-6xl mx-auto px-5">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-5">
+              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-5">
                 Insights
               </span>
-              <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-warm-fg leading-[1.2]">
-                OmnI NAVIGATION does not manage by reports or targets. It watches
-                reality as it happens, learns how your line truly behaves, and
-                guides operators with clear next steps &mdash;{" "}
-                <span className="text-warm-accent">
-                  before problems become losses.
-                </span>
+              <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
+                What if your line could{" "}
+                <span className="text-brand-orange">think ahead?</span>
               </h1>
+              <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
+                Five principles that shape how OmnI sees operations — and why
+                the best shift is the one where nothing went wrong.
+              </p>
             </div>
           </ScrollReveal>
         </div>
@@ -56,7 +56,7 @@ export default function InsightsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollReveal>
               <div>
-                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-4">
                   01 &mdash; Reality &ldquo;As Is&rdquo;
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-5">
@@ -140,7 +140,7 @@ export default function InsightsPage() {
             </ScrollReveal>
             <ScrollReveal delay={0.08}>
               <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
-                <h3 className="font-display text-lg font-semibold tracking-tight text-warm-accent mb-3">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-brand-orange mb-3">
                   OmnI: Flow
                 </h3>
                 <ul className="space-y-2.5">
@@ -154,7 +154,7 @@ export default function InsightsPage() {
                       key={item}
                       className="flex items-start gap-2.5 text-[15px] text-dark-fg leading-snug"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-warm-accent mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-2 shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -196,7 +196,7 @@ export default function InsightsPage() {
                     key={item.n}
                     className="flex items-start gap-4 border border-dark-border rounded-lg p-4"
                   >
-                    <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-dark-surface border border-dark-border text-warm-accent font-display text-xs font-semibold shrink-0">
+                    <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-dark-surface border border-dark-border text-brand-orange font-display text-xs font-semibold shrink-0">
                       {item.n}
                     </span>
                     <div>
@@ -221,7 +221,7 @@ export default function InsightsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollReveal>
               <div>
-                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
+                <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-brand-plum mb-4">
                   03 &mdash; Unified Signals
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-5">
@@ -262,7 +262,7 @@ export default function InsightsPage() {
                   <ScrollReveal key={item.n} delay={0.1 + i * 0.06}>
                     <Card variant="raised" className="p-5">
                       <div className="flex items-start gap-4">
-                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-4 text-warm-accent font-display text-xs font-semibold shrink-0">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-4 text-brand-orange font-display text-xs font-semibold shrink-0">
                           {item.n}
                         </span>
                         <div>
@@ -300,7 +300,7 @@ export default function InsightsPage() {
               <ScrollReveal key={i} delay={i * 0.06}>
                 <Card hover className="p-7 h-full">
                   <div className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-warm-accent mt-2 shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0" />
                     <p className="text-[15px] text-warm-muted leading-relaxed italic">
                       {quote}
                     </p>
@@ -359,7 +359,7 @@ export default function InsightsPage() {
                       key={item}
                       className="flex items-start gap-2.5 text-[15px] text-dark-fg leading-snug"
                     >
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-warm-accent shrink-0 mt-0.5"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-orange shrink-0 mt-0.5"><path d="M4.5 12.75l6 6 9-13.5" /></svg>
                       {item}
                     </li>
                   ))}
@@ -370,95 +370,20 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* -------- 8. Quiet Shifts (light) -------- */}
-      <section className="bg-warm-bg py-20">
-        <div className="max-w-3xl mx-auto px-5">
-          <ScrollReveal>
-            <Card className="p-8 md:p-12 text-center">
-              <span className="inline-block text-xs font-display font-medium tracking-[0.15em] uppercase text-warm-accent mb-4">
-                05 &mdash; The Goal
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-warm-fg mb-4">
-                Quiet shifts
-              </h2>
-              <p className="text-[15px] text-warm-muted leading-relaxed max-w-xl mx-auto">
-                The best shifts are not the ones with heroic saves. They are the
-                ones where nothing dramatic happens &mdash; because flow was
-                stable, guidance was early, and people acted before problems
-                compounded. No drama. No firefighting. Just steady, confident
-                production.
-              </p>
-            </Card>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* -------- 9. Business Value (dark) -------- */}
+      {/* -------- CTA (dark) -------- */}
       <section className="dark-section py-24 md:py-32">
-        <div className="max-w-6xl mx-auto px-5">
-          <SectionHeading
-            tag="Business Value"
-            title="What OmnI delivers"
-            subtitle="Measurable impact from the first shift."
-          />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                n: "01",
-                title: "Predict Next",
-                body: "Anticipate disturbances before they become losses. Guidance arrives before the problem does.",
-              },
-              {
-                n: "02",
-                title: "50% Less NVA",
-                body: "Reduce non-value-added time by targeting the real causes, not the symptoms visible in reports.",
-              },
-              {
-                n: "03",
-                title: "Voice Co-Pilot",
-                body: "Operators interact naturally. OmnI listens, understands context, and responds with clear next steps.",
-              },
-              {
-                n: "04",
-                title: "Unified Intelligence",
-                body: "One model that connects quality, production, and maintenance signals into coherent operational guidance.",
-              },
-            ].map((item, i) => (
-              <ScrollReveal key={item.n} delay={i * 0.06}>
-                <div className="rounded-lg border border-dark-border p-7 bg-dark-surface hover:border-warm-border-strong transition-colors duration-200 h-full">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-dark-surface border border-dark-border text-warm-accent font-display text-xs font-semibold mb-5">
-                    {item.n}
-                  </span>
-                  <h3 className="font-display text-[15px] font-semibold tracking-tight text-dark-fg mb-1.5">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-dark-muted leading-relaxed">
-                    {item.body}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* -------- 10. CTA (light) -------- */}
-      <section className="bg-warm-bg py-20">
-        <div className="max-w-3xl mx-auto px-5">
+        <div className="max-w-3xl mx-auto px-5 text-center">
           <ScrollReveal>
-            <Card className="p-10 md:p-14 text-center">
-              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-warm-fg mb-3">
-                See OmnI on your line
-              </h2>
-              <p className="text-warm-muted mb-8 max-w-xl mx-auto leading-relaxed">
-                No slides. No generic demos. We work with your real data, your
-                real shifts, and your real challenges. One line is all it takes
-                to see the difference.
-              </p>
-              <Button href="/contact" variant="accent" size="lg">
-                Request a Demo
-              </Button>
-            </Card>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.12] mb-5">
+              The goal: quiet shifts
+            </h2>
+            <p className="text-dark-muted leading-relaxed mb-10 max-w-xl mx-auto">
+              No drama. No heroics. Just stable flow — because small risks were
+              handled early. One real line, one real shift, one real problem.
+            </p>
+            <Button href="/contact" variant="accent" size="lg">
+              Request a Demo
+            </Button>
           </ScrollReveal>
         </div>
       </section>

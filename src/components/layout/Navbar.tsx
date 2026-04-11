@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "@/lib/constants";
@@ -25,13 +26,22 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="font-display font-semibold text-warm-fg text-[15px] tracking-tight">
-            Myrtle Europe
-          </span>
-          <span className="text-[11px] text-warm-muted tracking-[0.1em] uppercase font-display">
-            OmnI
-          </span>
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <Image
+            src="/logo.png"
+            alt="OmnI logo"
+            width={32}
+            height={32}
+            className="shrink-0"
+          />
+          <div className="flex flex-col leading-none">
+            <span className="font-display font-semibold text-warm-fg text-[15px] tracking-tight">
+              omni
+            </span>
+            <span className="text-[9px] text-warm-muted tracking-[0.12em] uppercase font-display">
+              by Myrtle Europe
+            </span>
+          </div>
         </Link>
 
         <div className="hidden lg:flex items-center gap-1">
@@ -41,8 +51,8 @@ export default function Navbar() {
               href={link.href}
               className={`px-3 py-1.5 text-sm font-display font-medium transition-colors duration-200 rounded ${
                 pathname === link.href
-                  ? "text-warm-accent"
-                  : "text-warm-muted hover:text-warm-hover"
+                  ? "text-brand-plum"
+                  : "text-warm-muted hover:text-brand-plum"
               }`}
             >
               {link.label}
@@ -51,7 +61,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <Button href="/contact" size="sm">Get in Touch</Button>
+          <Button href="/contact" variant="accent" size="sm">Get in Touch</Button>
         </div>
 
         <button
