@@ -145,7 +145,7 @@ export default function HowOmniThinksPage() {
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
                 A co-pilot, not an{" "}
-                <span className="text-brand-orange">autopilot</span>
+                <span className="brand-gradient-text">autopilot</span>
               </h1>
               <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 Three systems work in concert: one absorbs live signals, one

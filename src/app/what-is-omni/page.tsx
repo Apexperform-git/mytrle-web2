@@ -138,7 +138,7 @@ export default function WhatIsOmniPage() {
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.12] mb-7">
                 Not a dashboard.<br />
                 Not automation.<br />
-                <span className="text-brand-orange">Navigation.</span>
+                <span className="brand-gradient-text">Navigation.</span>
               </h1>
               <p className="text-lg md:text-xl text-warm-muted leading-relaxed max-w-2xl mx-auto">
                 OmnI learns how your operation actually behaves, reasons about
@@ -221,7 +221,7 @@ export default function WhatIsOmniPage() {
                 <p className="font-display text-xl md:text-2xl font-semibold tracking-tight text-warm-fg leading-snug">
                   &ldquo;If a system cannot explain itself to operators, it is
                   not intelligence &mdash;{" "}
-                  <span className="text-brand-orange">it is noise.</span>&rdquo;
+                  <span className="brand-gradient-text">it is noise.</span>&rdquo;
                 </p>
               </Card>
             </ScrollReveal>

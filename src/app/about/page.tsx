@@ -18,7 +18,7 @@ export default function AboutPage() {
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
                 Good systems make good people{" "}
-                <span className="text-brand-orange">better</span>
+                <span className="brand-gradient-text">better</span>
               </h1>
               <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 Myrtle Europe builds operational intelligence for manufacturing
