@@ -136,7 +136,10 @@ export default function WhatIsOmniPage() {
                 What is OmnI
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08] mb-7">
-                Not a dashboard.{" "}
+                Not a dashboard.
+                <br />
+                Not automation.
+                <br />
                 <span className="text-brand-orange">Navigation.</span>
               </h1>
               <p className="text-lg md:text-xl text-warm-muted leading-relaxed max-w-2xl mx-auto">
