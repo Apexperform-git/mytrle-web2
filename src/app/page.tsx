@@ -81,13 +81,13 @@ export default function HomePage() {
                 OmnI Navigation
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08] mb-6">
-                Move operators from guessing to{" "}
-                <span className="brand-gradient-text">guided</span>
+                The best shift is the one where nothing went{" "}
+                <span className="brand-gradient-text">wrong</span>
               </h1>
               <p className="text-lg md:text-xl text-warm-muted leading-relaxed max-w-2xl mx-auto mb-10">
-                OmnI watches your line in real time, reasons about what may
-                happen next, and gives clear, explainable guidance — without
-                ever taking control away from the operator.
+                OmnI watches your line in real time, reasons about what will
+                happen next, and guides your operators — before problems
+                become losses.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <Button href="/what-is-omni" variant="accent" size="lg">

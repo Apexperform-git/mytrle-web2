@@ -144,14 +144,13 @@ export default function HowOmniThinksPage() {
                 How OmnI Thinks
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
-                Bridge AI, OI, OT and{" "}
-                <span className="text-brand-orange">Human Capital</span>
+                A co-pilot, not an{" "}
+                <span className="text-brand-orange">autopilot</span>
               </h1>
               <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
-                OmnI is a co-pilot that interacts with your operators, builds
-                foresight from live signals, and delivers explainable guidance
-                &mdash; so the right decisions happen faster, with humans in
-                control.
+                Three systems work in concert: one absorbs live signals, one
+                reasons about what comes next, and one explains it all to the
+                operator in plain language.
               </p>
             </div>
           </ScrollReveal>

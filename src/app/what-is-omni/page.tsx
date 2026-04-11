@@ -136,17 +136,13 @@ export default function WhatIsOmniPage() {
                 What is OmnI
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08] mb-7">
-                Operational Intelligence that{" "}
-                <span className="text-brand-orange">Guides, Not Reports</span>
-              </h1>
-              <p className="text-lg md:text-xl text-warm-muted leading-relaxed max-w-2xl mx-auto mb-7">
-                OmnI NAVIGATION learns how your operation really behaves, reasons
-                about what may happen next, and guides people with clear,
-                explainable actions.
-              </p>
-              <p className="text-[15px] font-display font-medium tracking-tight text-warm-fg">
-                Not a dashboard. Not automation.{" "}
+                Not a dashboard.{" "}
                 <span className="text-brand-orange">Navigation.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-warm-muted leading-relaxed max-w-2xl mx-auto">
+                OmnI learns how your operation actually behaves, reasons about
+                what may happen next, and guides people with clear, explainable
+                actions — without taking control away from the operator.
               </p>
             </div>
           </ScrollReveal>
