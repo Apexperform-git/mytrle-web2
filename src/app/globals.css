@@ -68,11 +68,11 @@ body {
 
 /* ── Brand gradient utility ── */
 .brand-gradient {
-  background: linear-gradient(135deg, #E67A30 0%, #5B2A6E 100%);
+  background: linear-gradient(135deg, #E67A30 0%, #C73A5C 50%, #5B2A6E 100%);
 }
 
 .brand-gradient-text {
-  background: linear-gradient(135deg, #E67A30 0%, #5B2A6E 100%);
+  background: linear-gradient(135deg, #E67A30 0%, #C73A5C 50%, #5B2A6E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

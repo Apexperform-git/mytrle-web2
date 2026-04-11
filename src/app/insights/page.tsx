@@ -18,7 +18,7 @@ export default function InsightsPage() {
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
                 What if your line could{" "}
-                <span className="text-brand-orange">think ahead?</span>
+                <span className="brand-gradient-text">think ahead?</span>
               </h1>
               <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 Five principles that shape how OmnI sees operations — and why

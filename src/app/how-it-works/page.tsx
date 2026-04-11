@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
                 Reduce firefighting.
                 <br />
-                <span className="text-brand-orange">
+                <span className="brand-gradient-text">
                   Reveal what matters next.
                 </span>
               </h1>

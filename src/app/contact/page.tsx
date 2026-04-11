@@ -27,7 +27,7 @@ export default function ContactPage() {
               </span>
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-warm-fg leading-[1.08]">
                 Get in{" "}
-                <span className="text-brand-orange">touch</span>
+                <span className="brand-gradient-text">touch</span>
               </h1>
               <p className="mt-6 text-lg text-warm-muted leading-relaxed max-w-xl mx-auto">
                 We work with real lines, real shifts, and real challenges. Tell
